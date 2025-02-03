@@ -1,0 +1,128 @@
+/* teste de conexão */
+/*
+body{
+    background-color: red;
+}
+*/
+
+/* RESET Á LÁ JOÃO */
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+/* LAYOUT */
+
+main{
+    background-color: white;
+
+    width: 80%;
+    min-width: 800px;
+
+    padding: 2em;
+
+    border: 5px;
+    border-radius: 10px;
+    border-style: double;
+
+    margin: 2em;
+}
+
+ul{
+    padding: center;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;   
+    margin: 1em auto;
+        
+}
+
+li{
+    display: inline-block;
+
+    padding: .5em;
+}
+
+div.logo_text{
+    background-color: red;
+    text-align: center;
+}
+
+h1{
+    background-color: greenyellow;
+}
+
+p{
+    padding: 1em;
+    border-bottom: 2px solid black;
+}
+
+div.menu{
+    padding: center;
+    margin: 2em;
+}
+
+strong{
+    padding: 2em;
+}
+
+/* DEFINIÇÃO E EDIÇÃO DE FONTE */
+*{
+    font-family: 'Roboto Mono', Arial, sans-serif;
+    font-weight: 400;
+}
+
+h1{
+    font-weight: 500;
+    font-size: 4em;
+}
+
+h2, h3{
+    font-weight: 450;
+}
+
+h2{
+    font-size: 2.4em;
+}
+
+h3{
+    font-size: 1.5em;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/* COR & INTERACÇÃO */
+
+body{
+    background-color: #ddd;
+}
+
+.selected_page{
+    color: orange;
+}
+
+li:hover, a:hover, a:focus{
+    color: orange;
+    cursor: pointer;
+}
+
+a:active{
+    color: white;
+    background-color: orange;
+}
+
+
+
+/* CONTEÚDOS ESPECÍFICOS */
+/* IMAGEM PÁGINA FOR-SALE.HTML */
+/* podemos no entanto dar volta a essa situação, transformando este elemento num elemento de bloco:
+img{
+    display: block;
+    margin: 10px auto;
+}
+*/
