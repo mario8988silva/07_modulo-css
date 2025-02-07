@@ -6,7 +6,17 @@
             body {
 
                 color: #665544;
-                padding: 20px;}
+                height: 100vh; /* define a altura/height do viewport, isto para centrar conteúdos */
+                padding: 20px;
+                
+                background-image: url(images/tulip.gif), url(images/magnolia-large.jpg); /* é possíver inserir mais do que uma imagem */
+                background-repeat: no-repeat;
+
+                /*
+                background-position: center center;
+                */
+                background-position: top left, bottom right; /* para manipular a segunda imagem ou outras posteriores, usa-se a vírgula entre definições, mediante a sequência em que as imagens são chamadas */
+            }
         </style>
     </head>
     <body>

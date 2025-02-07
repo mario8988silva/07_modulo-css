@@ -6,7 +6,19 @@
             body {
 
                 color: #665544;
-                padding: 20px;}
+                padding: 20px;
+
+                height: 100vh;
+
+                background-image: url(images/magnolia-large.jpg);
+                background-repeat: no-repeat;
+                
+                background-size: contain; /*faz com que a imagem aparece sempre toda, surgem no entanto margens*/
+                background-size: cover; /* faz com que a imagem ocupe todo o espaço do container onde é inserida. Parte da imagem pode-se perder */
+                background-position: center center; /*define a posição de attachment da imagem. por defeito é top-left*/
+                background-attachment: fixed; /*imagem fica fixa, sem acompanhar o scroll */
+            
+            }
         </style>
     </head>
     <body>

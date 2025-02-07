@@ -6,7 +6,24 @@
             body {
 
                 color: white;
-                padding: 20px;}
+                padding: 20px;
+
+                /* é uma boa prática inserir uma cor de fundo similar àquela predominante na imagem inserida, isto por questões de latência durante o download da imagem, num sentido de boas práticas direccionadas ao utilizador*/
+                background-color: rgb(49, 60, 35);
+
+                /* inserir uma imagem de fundo */
+                background-image: url(images/pattern.gif);
+
+                background-repeat: repeat; /* definido por defeito */
+                /*
+                background-repeat: repeat-x;
+                background-repeat: repeat-y;
+                background-repeat: no-repeat;
+                */
+
+                background-attachment: fixed; /* imagem fica fixa, deixa de acompanhar o scroll */
+                
+            }
         </style>
     </head>
     <body>
