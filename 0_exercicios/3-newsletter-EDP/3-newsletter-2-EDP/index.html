@@ -4,6 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Newsletter EDP : Mario Silva</title>
+
+    <style>
+        /* 
+        
+        inserir tudo numa folha .css à parte;
+
+        todos os h começam com maiuscula;
+
+        largura do a.btn;
+
+        header;
+
+        espaçamento entre sections; 
+
+        footer;
+
+
+        */
+        *{
+            padding: 0;
+            margin: 0;            
+            border:  none;
+            box-sizing: border-box;
+
+            
+            font-family: Arial, Helvetica, sans-serif;           text-decoration: none;
+        }
+
+        h1, a{
+            font-size: 1em;
+            font-variant: small-caps;
+
+            color: red;
+        }
+
+        h2{
+            font-size: 2em;
+            
+            color: rgb(97, 204, 168);
+        }
+
+        a.btn{
+            color: white;
+
+            background-color: red;
+
+            padding:.8em 1.5em;
+            border-radius: 25px;
+        }
+
+        .bold{
+            font-weight: 600;
+        }
+
+        img, video{
+            max-width: 100%;
+            max-height: 100%;
+        }
+        
+        section > img {
+            width: 40vw;
+        }
+
+        header > section{
+            text-align: center;
+            background-color: rgb(244, 244, 244);
+        }
+
+        main{
+            padding: 4vw;
+        }
+
+        main > section{
+            display:  flex;
+            gap: 5vw;
+        }
+
+        main > section > article>*{
+            margin: 3vw 0;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .alt_order{
+            flex-direction: row-reverse;
+        }
+
+        .btn{
+
+        }
+
+    </style>
 </head>
 <body>
     <header>
@@ -21,42 +114,52 @@
     
     <main>
         <section>
-            <h1>sorteio</h1>
-            <h2>participe até dia 2 de maio</h2>
-            <p>Lorem ipsum, dolor <span class="bold">sit amet consectetur </span>adipisicing elit. Officiis, officia!</p>
-            <a href="#" class="btn">inscrever</a>
+            <article>
+                <h1>sorteio</h1>
+                <h2>participe até dia 2 de maio 🚗</h2>
+                <p>Lorem ipsum, dolor <span class="bold">sit amet consectetur </span>adipisicing elit. Officiis, officia!</p>
+                <a href="#" class="btn">inscrever</a>
+            </article>            
             <img src="images/carro.png" alt="carro">
         </section>
 
-        <section>
-            <h1>sorteio</h1>
-            <h2>uma cabazada de frescura 🥦</h2>
-            <p>Lorem ipsum, dolor <span class="bold">sit amet consectetur </span>adipisicing elit. Officiis, officia!</p>
-            <a href="#" class="btn">inscrever</a>
+        <section class="alt_order">
+            <article>
+                <h1>sorteio</h1>
+                <h2>uma cabazada de frescura 🥦</h2>
+                <p>Lorem ipsum, dolor <span class="bold">sit amet consectetur </span>adipisicing elit. Officiis, officia!</p>
+                <a href="#" class="btn">inscrever</a>
+            </article>
             <img src="images/legumes.png" alt="legumes">
         </section>
 
         <section>
-            <h1>sorteio</h1>
-            <h2>faça uma pausa, ligue-se à terra 🍀</h2>
-            <p>Lorem ipsum, dolor <span class="bold">sit amet consectetur </span>adipisicing elit. Officiis, officia!</p>
-            <a href="#" class="btn">inscrever</a>
+            <article>
+                <h1>sorteio</h1>
+                <h2>faça uma pausa, ligue-se à terra 🍀</h2>
+                <p>Lorem ipsum, dolor <span class="bold">sit amet consectetur </span>adipisicing elit. Officiis, officia!</p>
+                <a href="#" class="btn">inscrever</a>
+            </article>            
             <img src="images/casa.png" alt="casa">
         </section>
 
         <section>
-            <h1>benefício</h1>
-            <h2>coisas que duram para sempre ✍</h2>
-            <p>Lorem ipsum, dolor <span class="bold">sit amet consectetur </span>adipisicing elit. Officiis, officia!</p>
-            <a href="#" class="btn">obter oferta</a>
+            <article>
+                <h1>benefício</h1>
+                <h2>coisas que duram para sempre ✍</h2>
+                <p>Lorem ipsum, dolor <span class="bold">sit amet consectetur </span>adipisicing elit. Officiis, officia!</p>
+                <a href="#" class="btn">obter oferta</a>
+            </article>            
             <img src="images/ctrlz.png" alt="caderno">
         </section>
 
         <section>
-            <h1>mobilidade eléctrica</h1>
-            <h2>está a pensar compar uma bicicleta?</h2>
-            <p>Lorem ipsum, dolor <span class="bold">sit amet consectetur </span>adipisicing elit. Officiis, officia!</p>
-            <a href="#" class="btn">ver condições</a>
+            <article>
+                <h1>mobilidade eléctrica</h1>
+                <h2>está a pensar compar uma bicicleta?</h2>
+                <p>Lorem ipsum, dolor <span class="bold">sit amet consectetur </span>adipisicing elit. Officiis, officia!</p>
+                <a href="#" class="btn">ver condições</a>
+            </article>            
             <img src="images/bike.png" alt="bicicleta">
         </section>
     </main>
