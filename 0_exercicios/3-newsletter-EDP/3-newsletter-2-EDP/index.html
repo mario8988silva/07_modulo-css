@@ -8,15 +8,13 @@
     <style>
         /* 
         
+        TO DO:
+        
         inserir tudo numa folha .css à parte;
-
-        todos os h começam com maiuscula;
-
-        largura do a.btn;
 
         header;
 
-        espaçamento entre sections; 
+        espaçamento entre sections;
 
         footer;
 
@@ -28,8 +26,10 @@
             border:  none;
             box-sizing: border-box;
 
+            /* --------------------------- */
             
-            font-family: Arial, Helvetica, sans-serif;           text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: none;
         }
 
         h1, a{
@@ -41,7 +41,7 @@
 
         h2{
             font-size: 2em;
-            
+                        
             color: rgb(97, 204, 168);
         }
 
@@ -52,12 +52,18 @@
 
             padding:.8em 1.5em;
             border-radius: 25px;
+
+            display: inline-block;
         }
 
         .bold{
             font-weight: 600;
         }
 
+        .link{
+            text-decoration: underline;
+        }
+        
         img, video{
             max-width: 100%;
             max-height: 100%;
@@ -67,21 +73,31 @@
             width: 40vw;
         }
 
-        header > section{
+        header section{
+            background-image: linear-gradient(#fff, #eee);
             text-align: center;
-            background-color: rgb(244, 244, 244);
+
+            padding-bottom: 2em;
+            display: flex;
+            flex-direction: column;  
+            gap: 5vw;      
+        }
+
+        header section a.btn{
+            background-color: blue;
+            
         }
 
         main{
             padding: 4vw;
         }
 
-        main > section{
-            display:  flex;
+        main section{
+            display: flex;
             gap: 5vw;
         }
 
-        main > section > article>*{
+        main section article>*{
             margin: 3vw 0;
 
             display: flex;
@@ -92,20 +108,77 @@
             flex-direction: row-reverse;
         }
 
-        .btn{
+        .btn{}
+
+        footer section{
+            background-color: rgb(193, 244, 227);
+
+            display: flex;
+            align-items: center;
+            gap: 2em;
+        }
+
+        footer section .dl_text *{
+            text-align: center;
+            font-variant: none;
+            color: black;
+
+            display: flex;
+            gap: 1em;
+            
+        }
+
+        footer h1{
+            font-size: 1.5em;
+        }
+
+        footer h2{
+            font-weight: 200;
+        }
+
+        footer .folha_1{                
+                    order: calc(-1);
+                }
+
+        footer{}
+            section{}
+                div.dl_text{}
+            
+        footer img{}
+
+        footer .logo_edp{
+            background-color: rgb(71, 71, 71);
+
+            padding: 5vw;
+            display: flex;
+        }
+
+        footer .logo_edp img{
 
         }
 
+        footer section.footer_{
+            background-color: #222;
+            color: white;
+
+            padding: 10vw;
+
+            flex-direction: column;
+        }
     </style>
 </head>
 <body>
     <header>
         
-        <figure class="image_header"></figure>
-        <figure class="foto-top"></figure>
+        <figure class="image_header">
+            <img src="images/pt.edp.image.header.png" alt="">
+        </figure>
+        <figure class="foto_top">
+            <img src="images/foto-top.jpg" alt="">
+        </figure>
         <section>
             <h1>experiência exclusiva</h1>
-            <h2>a energia que se gera da natureza</h2>
+            <h2>A energia que se gera da natureza</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum recusandae doloremque <span class="bold">debitis adipisci alias delectus omnis</span> incidunt quasi nobis possimus?</p>
             <a href="#" class="btn">inscrever</a>
             <img src="" alt="">
@@ -116,7 +189,7 @@
         <section>
             <article>
                 <h1>sorteio</h1>
-                <h2>participe até dia 2 de maio 🚗</h2>
+                <h2>Participe até dia 2 de maio 🚗</h2>
                 <p>Lorem ipsum, dolor <span class="bold">sit amet consectetur </span>adipisicing elit. Officiis, officia!</p>
                 <a href="#" class="btn">inscrever</a>
             </article>            
@@ -126,7 +199,7 @@
         <section class="alt_order">
             <article>
                 <h1>sorteio</h1>
-                <h2>uma cabazada de frescura 🥦</h2>
+                <h2>Uma cabazada de frescura 🥦</h2>
                 <p>Lorem ipsum, dolor <span class="bold">sit amet consectetur </span>adipisicing elit. Officiis, officia!</p>
                 <a href="#" class="btn">inscrever</a>
             </article>
@@ -136,7 +209,7 @@
         <section>
             <article>
                 <h1>sorteio</h1>
-                <h2>faça uma pausa, ligue-se à terra 🍀</h2>
+                <h2>Faça uma pausa, ligue-se à terra 🍀</h2>
                 <p>Lorem ipsum, dolor <span class="bold">sit amet consectetur </span>adipisicing elit. Officiis, officia!</p>
                 <a href="#" class="btn">inscrever</a>
             </article>            
@@ -146,7 +219,7 @@
         <section>
             <article>
                 <h1>benefício</h1>
-                <h2>coisas que duram para sempre ✍</h2>
+                <h2>Coisas que duram para sempre ✍</h2>
                 <p>Lorem ipsum, dolor <span class="bold">sit amet consectetur </span>adipisicing elit. Officiis, officia!</p>
                 <a href="#" class="btn">obter oferta</a>
             </article>            
@@ -156,7 +229,7 @@
         <section>
             <article>
                 <h1>mobilidade eléctrica</h1>
-                <h2>está a pensar compar uma bicicleta?</h2>
+                <h2>Está a pensar compar uma bicicleta?</h2>
                 <p>Lorem ipsum, dolor <span class="bold">sit amet consectetur </span>adipisicing elit. Officiis, officia!</p>
                 <a href="#" class="btn">ver condições</a>
             </article>            
@@ -166,8 +239,8 @@
 
     <footer>
         <section>
-            <div>
-                <h1>a cuidar do planeta é uqe a gente se entende.</h1>
+            <div class="dl_text">
+                <h1>A cuidar do planeta é que a gente se entende.</h1>
                 <h2>#GeracaoZero</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, in.</p>
                 <figure>
@@ -176,15 +249,18 @@
                 </figure>            
                 
             </div>            
-            <img src="images/folha1.png" alt="folha">
-            <img src="images/folhadrt.png" alt="folhas">
+            <img src="images/folha1.png" alt="folha" class="folha_1">
+            <img src="images/folhadrt.png" alt="folhas" class="folha_2">
         </section>
 
-        <figure>
+        <figure class="logo_edp">
             <img src="images/pt.edp.image.logo.png" alt="logo edp">
         </figure>
-              
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse, quam.</p><p>Lorem ipsum dolor <span class="link">sit amet consectetur</span> adipisicing elit. Facilis explicabo ipsam quam nesciunt modi officia omnis. Quibusdam cumque unde facilis? Sapiente cupiditate deleniti non quidem.</p><p>Lorem, ipsum dolor sit amet consectetur <span class="link">adipisicing elit.</span> Porro, quibusdam.</p>
+        
+        <section class="footer_">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse, quam.</p><p>Lorem ipsum dolor <span class="link">sit amet consectetur</span> adipisicing elit. Facilis explicabo ipsam quam nesciunt modi officia omnis. Quibusdam cumque unde facilis? Sapiente cupiditate deleniti non quidem.</p><p>Lorem, ipsum dolor sit amet consectetur <span class="link">adipisicing elit.</span> Porro, quibusdam.</p>
+        </section>
+        
     </footer>    
 </body>
 </html>
