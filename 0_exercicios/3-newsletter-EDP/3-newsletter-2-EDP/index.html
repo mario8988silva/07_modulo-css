@@ -41,6 +41,7 @@
 
         h2{
             font-size: 2em;
+            line-height: 1em;
                         
             color: rgb(97, 204, 168);
         }
@@ -63,7 +64,16 @@
         .link{
             text-decoration: underline;
         }
-        
+
+        section{
+            display: flex;
+            gap: 5vw;
+        }
+
+        article *{
+            margin: .5em 0;
+        }
+
         img, video{
             max-width: 100%;
             max-height: 100%;
@@ -73,42 +83,44 @@
             width: 40vw;
         }
 
-        header section{
-            background-image: linear-gradient(#fff, #eee);
-            text-align: center;
-
-            padding-bottom: 2em;
-            display: flex;
-            flex-direction: column;  
-            gap: 5vw;      
+        header h2{
+            font-size: 3em;
         }
 
-        header section a.btn{
-            background-color: blue;
+        header p{
+            font-size: 1.2em;
+        }
+
+        header section{
+            /*
+            background-image: linear-gradient(#fff, #eee);
+            */
+            padding: 4vw;
             
+            display: flex;
+
+            background-color: blue;
+        }
+
+        header section article *{
+            background-color: yellow;
         }
 
         main{
             padding: 4vw;
-        }
-
-        main section{
-            display: flex;
-            gap: 5vw;
-        }
-
-        main section article>*{
-            margin: 3vw 0;
 
             display: flex;
             flex-direction: column;
+            gap: 6vh;
         }
 
-        .alt_order{
+        main section article{
+            align-content: center;
+        }
+
+        main section.alt_order{
             flex-direction: row-reverse;
         }
-
-        .btn{}
 
         footer section{
             background-color: rgb(193, 244, 227);
@@ -173,15 +185,18 @@
         <figure class="image_header">
             <img src="images/pt.edp.image.header.png" alt="">
         </figure>
+
         <figure class="foto_top">
             <img src="images/foto-top.jpg" alt="">
         </figure>
+        
         <section>
-            <h1>experiência exclusiva</h1>
-            <h2>A energia que se gera da natureza</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum recusandae doloremque <span class="bold">debitis adipisci alias delectus omnis</span> incidunt quasi nobis possimus?</p>
-            <a href="#" class="btn">inscrever</a>
-            <img src="" alt="">
+            <article>
+                <h1>experiência exclusiva</h1>
+                <h2>A energia que se gera da natureza</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum recusandae doloremque <span class="bold">debitis adipisci alias delectus omnis</span> incidunt quasi nobis possimus?</p>
+                <a href="#" class="btn">inscrever</a>
+            </article>
         </section>
     </header>
     
