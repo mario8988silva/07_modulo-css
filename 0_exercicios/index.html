@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Respositório : Mário Silva</title>
+    <style>
+        /* reset de estilos */
+
+        *{
+            text-decoration: none;
+            font-family: Helvetica, Arial, sans-serif;
+
+            padding: 0;
+            border:  none;
+            margin: 0;           
+            box-sizing: border-box;
+
+            /* variáveis */
+            /* cor */
+            --c1:#ffe;
+            --c2:#888;
+            --c3:#333;
+            --c4:#333;
+            --c5:#333;
+            --c6:#333;
+
+            /* font-size */
+            --fs1: 2em;
+            --fs2: 1.5em;
+            --fs3: 1.2em;
+            --fs4: 1em;
+            --fs5: .8em;
+            --fs6: .6em;
+            
+            /* medidas fixas */
+            --m1: 10px;
+            --m2: 25px;
+            --m3: 50px;
+            --m4: 100px;
+            --m5: 300px;
+            --m6: 600px;
+        }
+
+        html{
+            background-color: var(--c1);
+        }
+
+        /* tipografia */
+        h1, p, a{
+            font-size: var(--fs3);
+            color: var(--c5);
+        }
+
+        /* nav */
+        nav{
+            margin: var(--m4);
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: var(--m2);
+            row-gap: var(--m1);
+
+            justify-content: center;
+        }
+
+        nav a{
+            padding: var(--fs6) var(--fs1);
+            background-color: var(--c2);
+
+            text-align: center;
+        }
+
+        a._home{
+            position: sticky;
+            left: auto;
+            right: auto;
+            background-color: red;
+        }
+
+        nav a._front{
+            background-color: green;
+        }
+
+        /* main */
+        main{
+            height: 100%;
+            margin: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* section - geral */
+        figure{
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--m2);
+        }
+        
+        figure a{
+            background-color: var(--c2);
+
+            height: var(--m5);
+            width: var(--m5);
+
+            align-content: end;
+        }
+
+        figure a img{
+            display: flex;
+        }
+
+        figure a p{
+            text-align: center;
+            padding: var(--m1) 0;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <!-- eventualmente fazer com backend os filtros de cada módulo, conteudos de back desaparecem quando front está activo. -->
+    <!-- nav com os vários módulos. eventualmente fazer o mesmo para os módulos de backend -->
+    <a href="#" class="_home">HOME</a>
+
+    <nav>
+        <a href="#" class="_front">front end</a>
+        <a href="#s_html">html</a>
+        <a href="#s_css">css</a>
+        <a href="#">sass</a>
+        <a href="#">rwd</a>
+        <a href="#">fundamentos programação</a>
+        <a href="#">javascript</a>
+        <a href="#">react</a>
+        <a href="#">projecto front end</a>
+        <!--
+        <a href="#" class="_back">back end</a>
+        <a href="#">introdução à estruturação de dados</a>
+        <a href="#">fundamentos à estruturação de dados</a>
+        <a href="#">bases de dados mysql</a>
+        <a href="#">php</a>
+        <a href="#">php frameworks - Lavarel</a>
+        <a href="#">criação de rest api's</a>
+        <a href="#">mongodb, nodejs, express js</a>
+        <a href="#">projecto back end</a>
+        -->
+    </nav>
+
+    <!-- cada tema fica dentro de uma section -->
+    <!-- fazer thumbnails dos sites/exercicios com recurso às css grid -->
+
+    <main>
+        <!--
+        <section id="s_html"></section>
+        -->
+        <section id="s_css">
+            <figure class="_css">
+                <a href="#" target="_blank">
+                    <img src="" alt="box model">
+                    <p>box model</p>
+                </a>
+                <a href="#" target="_blank">
+                    <img src="" alt="newsletter flag">
+                    <p>newsletter flag</p>
+                </a>
+                <a href="#" target="_blank">
+                    <img src="" alt="newsletter edp">
+                    <p>newsletter edp</p>
+                </a>
+                <a href="#" target="_blank">
+                    <img src="" alt="newsletter teashop">
+                    <p>newsletter teashop</p>
+                </a>
+                <a href="#" target="_blank">
+                    <img src="" alt="galley grids">
+                    <p>galley grids</p>
+                </a>
+                <a href="#" target="_blank">
+                    <img src="" alt="exercicio speo">
+                    <p>exercicio speo</p>
+                </a>
+            </figure>
+        </section>
+    </main>
+
+</body>
+</html>
