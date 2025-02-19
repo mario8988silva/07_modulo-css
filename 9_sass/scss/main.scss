@@ -1,0 +1,77 @@
+/*
+@import 'variables'; ñ se usa o _underscore nem .extensão; @import está a entrar em desuso e possivelmente ilgegível nas próximas versões;
+*/
+
+/*
+@use 'variables';
+*/
+
+@use 'variables' as *;
+
+*{
+    margin: 0;
+    padding:  0;
+    border: none;
+    box-sizing: border-box;
+}
+
+/*
+body{
+    background-color: variables.$light-color;
+    color: variables.$dark-color;
+    font-family: variables.$font-stack;
+    line-height: 1.5;
+}
+*/
+
+body{
+    background-color: $light-color;
+    color: $dark-color;
+
+    /*
+    font-family: $font-stack;
+    font-size: 18px;
+    */
+    // Nested Properties
+    font: {
+        family: $font-stack;
+        size: 18px;
+    };
+
+    line-height: 1.5;
+}
+
+header{
+    background-color: $dark-color;
+    color: $light-color;
+    padding: 1rem;
+
+    h1{
+        text-align: center;
+    }
+}
+
+.section{
+    padding:  3rem;
+
+    /* &-a diz o mesmo que .section-a
+    & repete a descrição do elemento, tudo o que vem depois é especificação;*/
+
+    &-a{
+        background-color: $primary-color;
+        color: white;
+    }
+
+    &-b{
+        background-color: $secondary-color;
+        color: white;
+    }
+
+    a{
+        color: #000;
+
+        &:hover{
+            color: orange;
+        }
+    }
+}
