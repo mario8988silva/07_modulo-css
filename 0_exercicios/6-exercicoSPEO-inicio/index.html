@@ -16,6 +16,8 @@
             font-family: Arial, Helvetica, sans-serif;
             color: #000;
 
+            text-decoration: none;
+
             /* colours */
             --soft_grey: #ccc;
             --medium_grey: #666;
@@ -30,31 +32,124 @@
             --l1: 10px;
         }
 
+        h1{
+            font-weight: 600;
+            font-size: 1.4em;
+            line-height: 1.4em;
+        }
+
+        h2{
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        p{
+            font-size: 1.1em;
+            line-height: 1.3em;
+        }
+
         /* header -------------------------- */
 
         header{
-            display: flex;
-            flex-direction: column;
-            height: 800px;
+            display: grid;
+            grid-template-rows: 6;
+            grid-template-columns: ;
 
             background-color: var(--soft_grey);
+            
             background-image: url(images/index-banner.jpg);
-            background-size: cover;
+            background-size:cover;
+            background-repeat: no-repeat;
+            background-position: center;
         }
 
         header *{
             color: #fff;
         }
+
+        header img.logo_xl{
+
+        }
+
+        header nav{
+            display: grid;
+            grid: ;
+        }
         
         /* nav -------------------------- */
+
+        nav.nav{
+            background-color: var(--dark_grey);
+            height: 9vh;
+
+            display: grid;
+            grid-template-columns: repeat(6 / 10wh);
+            grid-template-rows: 20% 50% 30%;
+        }
+
+        nav.nav *{
+            color: #fff;
+            text-decoration: none;
+        }
         
         /* main -------------------------- */
         
         /* article -------------------------- */
         
         /* div -------------------------- */
+
+        main section.destaques{
+            background-color: var(--soft_grey);
+        }
         
         /* section noticias -------------------------- */
+
+        nav.noticias{
+            display: flex;
+            flex-direction: row;
+        }
+
+        a.card_img{
+            width: 370px;
+            display: flex;
+            flex-direction: column;
+
+            box-shadow: var(--dark_grey);
+            opacity: .2;
+        }
+        
+        a.card_img{
+            opacity: 1;
+
+            animation: ;
+        }
+
+        a.card_img article{
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+
+            padding: 1em .8em .4em;
+            
+            border-top: 5px solid var(--red);
+        }
+
+        a.card_img h1, h2{
+            text-transform: uppercase;
+        }
+
+        a.card_img h1{
+            padding-right: 2em;
+        }
+
+        a.card_img p{
+            color: var(--medium_grey);
+        }
+
+        a.card_img h2{
+            color: var(--red);
+        }
         
         /* section imprensa -------------------------- */
 
@@ -74,7 +169,7 @@
 
 <body>
     <header>
-        <img src="images/LogotipoSPEO.png" alt="logo_xl" class="logo">
+        <img src="images/LogotipoSPEO.png" alt="logo_xl" class="logo_xl">
         <h1>sociedade portuguesa para o estudo da obesidade</h1>
 
         <nav>
@@ -86,7 +181,7 @@
         
     </header>
 
-    <nav>
+    <nav class="nav">
         <img src="" alt="logo_m" class="">
         <a href="#">en</a>
         <a href="#">speo</a>
@@ -112,7 +207,7 @@
                 <h2>noticias</h2>
 
                 <a href="#" class="card_img">
-                    <img src="" alt="">
+                    <img src="images/Imagem01N.png" alt="">
                     <article>
                         <h1>ico/eco 2020 to be held in dublin</h1>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatum odit quod enim id provident!</p>
