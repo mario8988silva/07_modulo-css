@@ -33,9 +33,10 @@
         }
 
         h1{
-            font-weight: 600;
-            font-size: 1.4em;
+            font-weight: 500;
+            font-size: 4em;
             line-height: 1.4em;
+            text-transform: uppercase;
         }
 
         h2{
@@ -104,27 +105,49 @@
         
         /* section noticias -------------------------- */
 
-        nav.noticias{
-            display: flex;
-            flex-direction: row;
+        /*
+        h1, section h1, nav h1{
+            font-weight: 600;
+            font-size: 1.4em;
+            line-height: 1.4em;
         }
 
-        a.card_img{
+        h2{
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        p{
+            font-size: 1.1em;
+            line-height: 1.3em;
+        }
+        */
+
+        section{
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav.noticias, nav.imprensa{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        a.card_img, a.card{
             width: 370px;
             display: flex;
             flex-direction: column;
 
-            box-shadow: var(--dark_grey);
-            opacity: .2;
+            box-shadow: 0 10px 50px rgba(51, 51, 51, .1);
+            transition-delay: 150ms ease-in;
         }
         
-        a.card_img{
-            opacity: 1;
-
-            animation: ;
+        a.card_img:hover, a.card:hover{
+            box-shadow: 0 10px 50px rgba(51, 51, 51, 1);
         }
 
-        a.card_img article{
+        a.card_img article, a.card article{
             background-color: #fff;
             display: flex;
             flex-direction: column;
@@ -155,6 +178,25 @@
 
         /* section newsletter -------------------------- */
         
+        section.newsletter{
+            background-color: var(--red);
+            height: 50vh;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content:space-around;
+        }
+
+        section.newsletter *{
+            color: #fff;
+            text-align: center;
+        }
+
+        form div.input_box *{
+            color: #333;
+            text-align: start;
+        }
         /* nav -------------------------- */
 
         /* footer -------------------------- */
@@ -256,6 +298,14 @@
 
                 <a href="#" class="card">
                     <article>
+                        <h1>eurostat</h1>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio et iste, harum ea eius accusamus.</p>
+                        <h2>28 jun 2017</h2>
+                    </article>
+                </a>
+
+                <a href="#" class="card">
+                    <article>
                         <h1>yahoo news</h1>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio et iste, harum ea eius accusamus.</p>
                         <h2>28 set 2017</h2>
@@ -278,7 +328,7 @@
                 <label for="user_mail">gostaria de ser assinante da nossa Newsletter?<br>insira o seu endereço de correio electrónico aqui!</label>
 
                 <div class="input_box">
-                    <input type="text" id="user_mail" name="user_mail" value=""><input type="submit">
+                    <input type="text" id="user_mail" name="user_mail" value=""><input type="✉">
                 </div>
             </form>
         </section>
