@@ -5,6 +5,8 @@
 /*
 @use 'variables';
 */
+/* function */
+/* mixin */
 * {
   margin: 0;
   padding: 0;
@@ -34,7 +36,8 @@ body {
 
 header {
   background-color: #333;
-  color: #f4f4f4;
+  /* chama a function : mediante o brilho da cor de fundo, a cor de texto muda entre dois valores */
+  color: #fff;
   padding: 1rem;
 }
 header h1 {
@@ -45,20 +48,57 @@ header h1 {
   padding: 3rem;
   /* &-a diz o mesmo que .section-a
   & repete a descrição do elemento, tudo o que vem depois é especificação;*/
+  /*
+  a{
+      color: #000;
+
+      &:hover{
+          color: orange;
+      }
+  }
+  */
 }
 .section-a {
   background-color: steelblue;
-  color: white;
+  color: #fff;
 }
 .section-b {
   background-color: skyblue;
-  color: white;
+  color: #333;
 }
-.section a {
-  color: #000;
+
+.btn-dark, .btn-light {
+  display: inline-block;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 1rem;
 }
-.section a:hover {
-  color: orange;
+
+.btn-light {
+  /* chama o extend */
+  background-color: #f4f4f4;
+  color: #333;
+}
+.btn-light:hover {
+  /* chama o mix-in */
+  -webkit-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  -o-transform: rotate(10deg);
+  transform: rotate(10deg);
+}
+.btn-dark {
+  /* chama o extend */
+  background-color: #333;
+  color: #fff;
+}
+.btn-dark:hover {
+  /* chama o mix-in */
+  -webkit-transform: rotate(-30deg);
+  -ms-transform: rotate(-30deg);
+  -o-transform: rotate(-30deg);
+  transform: rotate(-30deg);
 }
 
 /*# sourceMappingURL=main.css.map */
