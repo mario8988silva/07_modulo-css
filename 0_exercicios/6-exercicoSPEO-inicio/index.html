@@ -4,52 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles/reset.css">
 
     <title>Exercício 6 CSS : Mário Silva</title>
 
     <style>
         /* passar css para documento à parte */
-        
-        /* fonts & type -------------------------- */
-        *{
-            font-family: Arial, Helvetica, sans-serif;
-            color: #000;
 
-            text-decoration: none;
-
+        :root{
             /* colours */
-            --soft_grey: #ccc;
-            --medium_grey: #666;
-            --dark_grey: #333;
-            --red: #f00;
-            --blue: #00f;
 
-            /* font sizes */
-            --fs1: 2em;
+            --shade_0: #fff;
+            --shade_1: #f4f4f4;
+            --shade_2: #7f7f7f;
+            --shade_3: #333;
+            --shade_4: #292b2c;
+            --shade_5: #000;
 
-            /* sizes and lenghts */
-            --l1: 10px;
+            --r: #ba0216;
+            --b: #0071bc;     
+
+
+            /* font weights; sizes & lenghts */
+
+            --weight_s: 100;
+            --weight_m: 400;
+            --weight_l: 500;            
+            --weight_xl: 700;
+  
+            --size_12: 12px;
+            --size_15: 15px;
+            --size_16: 16px;
+            --size_17: 17px;
+            --size_18: 18px;
+            --size_20: 20px;
+            --size_22: 22px;
+            --size_24: 24px;
+            --size_28: 28px;
+            --size_31: 31px;
+            --size_32: 32px;            
+            --size_33: 33px;
+            --size_35: 35px;  
+            
+            /* fonts & type -------------------------- */  
+
+            font-family: Lato, Arial, Helvetica, sans-serif;
+            font-size: var(--size_16);
+            line-height: var(--size_24);
+
+            color: palevioletred;
+        }
+
+        *{
+            text-decoration: none;
+        }
+
+        h1, h2{
+            text-transform: uppercase;
+            color: var(--shade_4);
         }
 
         h1{
-            font-weight: 500;
-            font-size: 4em;
-            line-height: 4em;
-            text-transform: uppercase;
+            font-weight: var(--weight_l);
+            font-size: var(--size_32);
+            line-height: var(--size_35);
         }
 
         h2{
-            font-weight: 600;
-            font-size: 1.1em;
-            text-transform: uppercase;
+            font-size: var(--size_18);
+            line-height: var(--size_31);
         }
 
         p{
-            font-size: 1.1em;
-            line-height: 1.3em;
+            color: var(--shade_2);
+        }
 
-            color: var(--medium_grey);
+        a:hover{
+            color: var(--r);
+        }
+
+        .icon_m{
+            height: var(--size_28);
+            padding: var(--size_24);
+
+            background-color: red;
+        }
+
+        .icon_s{
+            height: var(--size_16);
+            width: var(--size_16);
+            padding: var(--size_12);
+            background-color: red;
         }
 
         /*
@@ -60,6 +109,15 @@
         }
         */
 
+        /*
+        input[class='input_box']::after{
+            content: url(images/envelope-solid.svg);
+            margin-left: 1px;
+
+            background-color: red;
+        }
+        */
+
         /* header -------------------------- */
 
         header{
@@ -67,16 +125,16 @@
             grid-template-rows: 6;
             grid-template-columns: ;
 
-            background-color: var(--soft_grey);
+            background-color: var(--shade_2);
             
             background-image: url(images/index-banner.jpg);
-            background-size:cover;
+            background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
         }
 
         header *{
-            color: #fff;
+            color: var(--shade_0);
         }
 
         header img.logo_xl{
@@ -91,7 +149,7 @@
         /* nav -------------------------- */
 
         nav.nav{
-            background-color: var(--dark_grey);
+            background-color: var(--shade_3);
             height: 9vh;
 
             display: grid;
@@ -100,7 +158,7 @@
         }
 
         nav.nav *{
-            color: #fff;
+            color: var(--shade_0);
             text-decoration: none;
         }
         
@@ -111,7 +169,7 @@
         /* div -------------------------- */
 
         main section.destaques{
-            background-color: var(--soft_grey);
+            background-color: var(--shade_1);
         }
         
         /* section noticias -------------------------- */
@@ -165,7 +223,7 @@
             font-weight: 600;
             font-size: 1.1em;
 
-            color: var(--red);
+            color: var(--r);
         }
         
                 /*
@@ -177,7 +235,7 @@
         /* section newsletter -------------------------- */
         
         section.newsletter{
-            background-color: var(--red);
+            background-color: var(--r);
             height: 50vh;
 
             display: flex;
@@ -187,25 +245,62 @@
         }
 
         section.newsletter *{
-            color: #fff;
+            color: var(--shade_0);
             text-align: center;
         }
 
         form div.input_box *{
-            color: #333;
+            color: var(--shade_3);
             text-align: start;
         }
-
 
         /* nav -------------------------- */
 
         /* footer -------------------------- */
+
+        footer{
+            background-color: var(--shade_3);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            gap: var(--size_32);
+            flex-wrap: wrap;
+
+            padding: 5% 10%;
+        }
+
+        footer article{
+            display: flex;
+            flex-direction: column;
+        }
+
+        footer article *{
+            color: var(--shade_0);
+        }          
+
+        footer article a .icon_m:hover{
+            background-color: yellow;
+        }
+        
+        footer article a :hover{
+            color: var(--r);
+        }
+
+       
+        
         
         /* article informações -------------------------- */
+        footer article.info li{
+            list-style-position: outside;
+            list-style-type: square;
+
+            color: var(--r);
+        }      
         
         /* article newsletter -------------------------- */
         
         /* article onde estamos -------------------------- */
+
     </style>
 </head>
 
@@ -243,10 +338,14 @@
         </article>
 
         <section class="destaques">
+
             <h1>destaques</h1>            
 
-            <nav class="noticias">
+            <div class="noticias">
+
                 <h2>noticias</h2>
+
+                <nav class="cards nav_noticias">                
 
                 <a href="#" class="card_img card">
                     <img src="images/Imagem01N.png" alt="">
@@ -284,51 +383,57 @@
                     </article>
                 </a>                
             </nav>
+            </div>
 
-            <nav class="imprensa">
+            <div class="imprensa">
+
                 <h2>imprensa</h2>
 
-                <a href="#" class="card">
-                    <article>
-                        <h1>jornal i</h1>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio et iste, harum ea eius accusamus.</p>
-                        <h2>28 jun 2017</h2>
-                    </article>
-                </a>
+                <nav class="nav_cards nav_imprensa">                
 
-                <a href="#" class="card">
-                    <article>
-                        <h1>eurostat</h1>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio et iste, harum ea eius accusamus.</p>
-                        <h2>28 jun 2017</h2>
-                    </article>
-                </a>
+                    <a href="#" class="card">
+                        <article>
+                            <h1>jornal i</h1>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio et iste, harum ea eius accusamus.</p>
+                            <h2>28 jun 2017</h2>
+                        </article>
+                    </a>
 
-                <a href="#" class="card">
-                    <article>
-                        <h1>yahoo news</h1>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio et iste, harum ea eius accusamus.</p>
-                        <h2>28 set 2017</h2>
-                    </article>
-                </a>
+                    <a href="#" class="card">
+                        <article>
+                            <h1>eurostat</h1>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio et iste, harum ea eius accusamus.</p>
+                            <h2>28 jun 2017</h2>
+                        </article>
+                    </a>
 
-                <a href="#" class="card">
-                    <article>
-                        <h1>expresso</h1>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio et iste, harum ea eius accusamus.</p>
-                        <h2>17 nov 2017</h2>
-                    </article>
-                </a>
-            </nav>
+                    <a href="#" class="card">
+                        <article>
+                            <h1>yahoo news</h1>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio et iste, harum ea eius accusamus.</p>
+                            <h2>28 set 2017</h2>
+                        </article>
+                    </a>
+
+                    <a href="#" class="card">
+                        <article>
+                            <h1>expresso</h1>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio et iste, harum ea eius accusamus.</p>
+                            <h2>17 nov 2017</h2>
+                        </article>
+                    </a>
+                </nav>
+            </div>               
         </section>
 
         <section class="newsletter">
+
             <h1>newsletter</h1>
             <form action="">
-                <label for="user_mail">gostaria de ser assinante da nossa Newsletter?<br>insira o seu endereço de correio electrónico aqui!</label>
+                <label for="user_mail">Gostaria de ser assinante da nossa Newsletter?<br>Insira o seu endereço de correio electrónico aqui!</label>
 
                 <div class="input_box">
-                    <input type="text" id="user_mail" name="user_mail" value=""><input type="✉">
+                    <input type="text" id="user_mail" name="user_mail" value="">
                 </div>
             </form>
         </section>
@@ -371,24 +476,25 @@
             <form action="">
                 <label for="user_mail">receba a nossa Newsletter</label>
                 <div class="input_box">
-                    <input type="text" id="user_mail" name="user_mail" value=""><input type="submit">
+                    <input type="text" id="user_mail" name="user_mail" value="">
                 </div>
             </form>
 
             <div class="social">
-                <a href="#"><img src="" alt="facebook"></a>
-                <a href="#"><img src="" alt="twiter"></a>
-                <a href="#"><img src="" alt="youtube"></a>
+                <a href="#"><img src="images/facebook-f-brands.svg" alt="facebook" class="icon_m"></a>
+                <a href="#"><img src="images/twitter-brands.svg" alt="twiter" class="icon_m"></a>
+                <a href="#"><img src="images/youtube-brands.svg" alt="youtube" class="icon_m"></a>
             </div>
         </article>
         
         <article class="location">
             <h1>onde estamos</h1>
 
-            <img src="#" alt="mail">
-            <img src="#" alt="phone">
-            <img src="#" alt="location">
-            <iframe>embed map</iframe>
+            <a href="mailto:speo@sapo.pt"><img src="images/envelope-solid.svg" alt="mail" class="icon_s">speo@sapo.pt</a>
+            <a href="tel:+351213904065"><img src="images/phone-solid.svg" alt="phone" class="icon_s">213904065</a> 
+            <a href="https://maps.app.goo.gl/VbWJ5hKexvT4D9z59"><img src="images/location-dot-solid.svg" alt="location" class="icon_s">Rua Freitas Gazul 34, Loja 2
+                1350-149 Lisboa</a>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5235.658681880511!2d-9.178709854708009!3d38.71456527037108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19335c209af0ed%3A0xf1e7f4ee0e465182!2sR.%20Freitas%20Gazul%2034%202%2C%201350-148%20Lisboa!5e0!3m2!1sen!2spt!4v1740493623093!5m2!1sen!2spt" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </article>
     </footer>    
 </body>
