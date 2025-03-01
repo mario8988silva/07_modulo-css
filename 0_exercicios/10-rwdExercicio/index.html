@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 10 : Mário Silva</title>
+
+    <style>
+        /* GENERAL SETTINGS ----------------------------------------------------------------------------------------------------------- */
+        *{
+            padding: 0;
+            border: none;
+            margin: 0;           
+            box-sizing: border-box;
+
+            text-decoration: none;
+
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 18px;
+            line-height: 1.4em;
+            color: #000;
+        }
+
+        :root{
+            --green: #67e1ac;                     
+        }
+        
+        h1{
+            font-size: 1.8em;
+            font-weight: 300;
+        }
+
+        a.btn{
+            font-weight: 600;
+
+            padding: .4em 1em;
+            border: .2em #000 solid;
+            border-radius: 10px;            
+
+            align-self: flex-start;
+        }
+
+        /* BREAKPOINT S / BASIS ----------------------------------------------------------------------------------------------------------- */
+
+        /* HEADER ----------------------------------------------------------------------------------------------------------- */
+        header{
+            background-color: var(--green);
+
+            padding: 1em;
+        }
+
+        header nav{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header nav.logo{
+            height: auto;
+        }
+
+        header * a.link{
+            display: none;
+        }
+
+        header nav button.btn_menu{
+            height: 48px;
+            width: 48px;
+
+            background-color: var(--green);
+            border: .1em #000 solid;
+            border-radius: 5px;
+
+            padding: 6px;
+
+            display: flex;
+            align-content: center;
+            justify-content: center;  
+        }
+
+        /* MAIN ----------------------------------------------------------------------------------------------------------- */
+
+        main{
+            padding: 1.2em 1em;
+        }
+        /* MAIN > BANNER ----------------------------------------------------------------------------------------------------------- */
+
+        main figure.banner{
+            background-color: #ccc;
+            background-image: url(images/landing-page-banner.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            height: auto;
+            padding: 8% 20% 16% 5%;
+            border-radius: 20px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: .8em;
+        }
+
+        main figure.banner *{
+            color: #fff;
+        }
+
+        main figure.banner p{
+                margin-bottom: 1em;
+            }
+
+        main figure.banner a.btn{
+            border-color: #fff;
+        }
+
+        /* - SECTION > CARDS ----------------------------------------------------------------------------------------------------------- */
+
+        section.section_cards{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+
+            text-align: center;
+
+            gap: 4em;
+            
+            margin: 2em 0 4em 0;
+        }
+
+        section.section_cards article.card{
+            width: 80%;
+        }
+
+        section.section_cards article.card figure.img_container{
+            overflow: hidden;
+            height: 6.5em;
+
+            text-align: center;
+        }
+
+        section.section_cards article.card main.text_container{
+            max-height: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-self: flex-start;
+
+            padding: 0;
+            margin-bottom: 1.4em;
+        }
+
+        section.section_cards article.card main.text_container h1{
+            font-weight: 500;
+            color: #262550;
+        }
+
+        section.section_cards article.card main.text_container p{
+            text-align: center;
+            color: #777;
+        }
+
+        section.section_cards article.card a.btn{
+            border-color: var(--green);
+            color: var(--green);
+        }
+
+        /* FOOTER ----------------------------------------------------------------------------------------------------------- */
+
+        footer{
+            background-color: #222;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            padding: 1em;
+        }
+
+        footer p.footer_text{
+            display: none;   
+            color: #888;
+            font-size: .8em;
+
+            padding-top: .5em;
+        }
+
+        footer figure.icons_container{
+            display: flex;
+            flex-direction: row;
+            gap: .4em;
+        }
+
+        /* ----------------------------------------------------------------------------------------------------------- */
+
+        /* BREAKPOINT M ----------------------------------------------------------------------------------------------------------- */
+
+        @media screen and (min-width: 768px){
+
+            /* HEADER ----------------------------------------------------------------------------------------------------------- */
+            header{
+                padding: 1.6em 3.2em 1.6em 1.6em;
+            }
+
+            header * a.link{
+                display: flex;
+                padding-top: .6em;
+
+                color: #fff;
+                font-weight: 600;
+            }
+
+            header nav.nav_container nav.link_container{
+                display: flex;
+                gap: 1.6em;
+            }
+
+            header nav button.btn_menu{
+                display: none;
+            }
+
+            /* MAIN ----------------------------------------------------------------------------------------------------------- */
+
+            main{
+                padding: 1.9em 2em;
+            }
+
+            /* MAIN > BANNER ----------------------------------------------------------------------------------------------------------- */
+
+            main figure.banner{
+                padding-right: 40%;
+
+                gap: 1em;
+            }
+
+            main figure.banner h1{
+                font-size: 3em;
+                line-height: 1.2em;
+            }
+
+            main figure.banner p{
+                margin-bottom: 1.6em;
+            }
+
+            /* - SECTION > CARDS ----------------------------------------------------------------------------------------------------------- */
+
+            section.section_cards article.card{
+                width: 40%;
+            }
+
+            /* FOOTER ----------------------------------------------------------------------------------------------------------- */
+
+            footer{
+                justify-content: space-between;
+
+                padding: 2em 4em ;
+            }
+
+            footer p.footer_text{
+                display: flex;
+            }
+
+            footer figure.icons_container{
+                gap: .6em;
+            }
+
+            /* ----------------------------------------------------------------------------------------------------------- */      
+        }
+
+        /* BREAKPOINT L ----------------------------------------------------------------------------------------------------------- */
+
+        @media screen and (min-width: 1100px){
+
+            /* HEADER ----------------------------------------------------------------------------------------------------------- */
+
+            /* MAIN ----------------------------------------------------------------------------------------------------------- */
+
+            main{
+                padding: 2em 2em;
+            }
+
+            /* MAIN > BANNER ----------------------------------------------------------------------------------------------------------- */
+
+            main figure.banner{
+                padding-right: 50%;
+
+                gap: 1em;
+            }
+
+            main figure.banner h1{
+                font-size: 3.2em;
+                line-height: 1em;
+            }
+
+            main figure.banner p{
+                margin-bottom: 1em;
+            }
+
+            /* - SECTION > CARDS ----------------------------------------------------------------------------------------------------------- */
+
+            section.section_cards article.card{
+                width: 18%;
+            }
+
+            /* FOOTER ----------------------------------------------------------------------------------------------------------- */    
+        }
+
+    </style>
+</head>
+<body> <!-- ter em atenção o nome de algumas classes que nao estao em uso ou em uso incompleto-->
+    <header>
+        <nav class="nav_container">                     
+            <nav class="link_container">  
+                <a href="#" class="logo"><img src="images/ui/Logo.png" alt="logo"></a>  
+
+                <a href="#" class="link">New Features</a>
+                <a href="#" class="link">Gallery</a>
+                <a href="#" class="link">Articles</a>                
+            </nav>     
+            <a href="#" class="link">Contact</a>       
+            <button class="btn_menu"><img src="images/menu_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="menu" class="btn_menu-img"></button>
+        </nav>
+    </header>
+
+    <main>
+        <figure class="banner">
+            <h1>Design with Bootstrap</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates repellat incidunt quibusdam quidem impedit amet vero minima.</p>
+            <a href="#" class="btn">New Features</a>
+        </figure>
+
+        <section class="section_cards">
+            <article class="card">
+                <figure class="img_container">
+                    <img src="images/Responsive.png" alt="Responsive">
+                </figure>                
+                <main class="text_container">
+                    <h1>Responsive</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, dolorum.</p>                    
+                </main> 
+                <a href="#" class="btn">More</a>               
+            </article>
+
+            <article class="card">
+                <figure class="img_container">
+                    <img src="images/Flexible.png" alt="Flexible">
+                </figure>                
+                <main class="text_container">
+                    <h1>Flexible</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, dolorum.</p>                    
+                </main> 
+                <a href="#" class="btn">More</a>               
+            </article>
+
+            <article class="card">
+                <figure class="img_container">
+                    <img src="images/HTML5_+_CSS3.png" alt="html5 + css3">
+                </figure>                
+                <main class="text_container">
+                    <h1>HTML5 + CSS3</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, dolorum.</p>                    
+                </main> 
+                <a href="#" class="btn">More</a>               
+            </article>
+
+            <article class="card">
+                <figure class="img_container">
+                    <img src="images/Launch_Ready.png" alt="Launch Ready">
+                </figure>                
+                <main class="text_container">
+                    <h1>Launch Ready</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, dolorum.</p>                    
+                </main> 
+                <a href="#" class="btn">More</a>               
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p class="footer_text">Learn to build websites using CSS</p>
+        <figure class="icons_container">
+            <img src="images/ui/icon_facebook.png" alt="facebook" class="icon_s"><img src="images/ui/icon_twitter.png" alt="twitter" class="icon_s"><img src="images/ui/icon_google.png" alt="google" class="icon_s">
+        </figure>
+    </footer>
+
+</body>
+</html>

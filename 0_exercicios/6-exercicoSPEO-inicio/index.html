@@ -76,7 +76,6 @@
         section h1{
             border-bottom: 5px solid var(--r);
         }
-        
 
         h2{
             font-size: var(--size_18);
@@ -142,7 +141,6 @@
         }
 
         header img.logo_xl{
-
         }
 
         header nav{
@@ -167,6 +165,10 @@
         }
         
         /* main -------------------------- */
+
+        main > *, footer{
+            padding: var(--size_32) 10%;
+        }
         
         /* article -------------------------- */
         
@@ -184,9 +186,6 @@
             gap: 20px;
             
         }
-
-
-
 
         nav.nav_noticias, nav.nav_imprensa{
 
@@ -291,6 +290,11 @@
             justify-content: space-between;
         }
 
+        main section.parceiros a img.thumb_logo{
+            height: 120px;
+            width: auto;
+            padding: 54px 0;
+        }
 
         /* footer -------------------------- */
 
@@ -496,11 +500,11 @@
         <section class="parceiros">
             <h1>parceiros</h1>
             <nav>
-                <img src="images/LogoSonae.png" alt="sonae" class="thumb_logo">
-                <img src="images/LogoBayer.png" alt="bayer" class="thumb_logo">
-                <img src="images/LogoMinisterioSaude.png" alt="saude" class="thumb_logo">
-                <img src="images/LogoLibertySeguros.png" alt="liberty" class="thumb_logo">
-                <img src="images/LogoMedinfar.png" alt="medinfar" class="thumb_logo">
+                <a href="#"><img src="images/LogoSonae.png" alt="sonae" class="thumb_logo"></a>
+                <a href="#"><img src="images/LogoBayer.png" alt="bayer" class="thumb_logo"></a>
+                <a href="#"><img src="images/LogoMinisterioSaude.png" alt="saude" class="thumb_logo"></a>
+                <a href="#"><img src="images/LogoLibertySeguros.png" alt="liberty" class="thumb_logo"></a>
+                <a href="#"><img src="images/LogoMedinfar.png" alt="medinfar" class="thumb_logo"></a>
             </nav>
         </section>
         
