@@ -6,7 +6,7 @@
     <title>Exercício 10 : Mário Silva</title>
 
     <style>
-        /* GENERAL SETTINGS ----------------------------------------------------------------------------------------------------------- */
+        /* GENERAL SETTINGS ----------------------------------------------------------------------------------------------- */
         *{
             padding: 0;
             border: none;
@@ -22,13 +22,16 @@
         }
 
         :root{
-            --green: #67e1ac;                     
+            --green: #67e1ac;
+            --orange: #d56d17;                    
         }
         
         h1{
             font-size: 1.8em;
             font-weight: 300;
         }
+
+        /* BUTTON / LINK */
 
         a.btn{
             font-weight: 600;
@@ -40,8 +43,8 @@
             align-self: flex-start;
         }
 
-        /* BREAKPOINT S / BASIS ----------------------------------------------------------------------------------------------------------- */
 
+        /* ** BREAKPOINT S / BASIS ** --------------------------------------------------------------------------------------- */
         /* HEADER ----------------------------------------------------------------------------------------------------------- */
         header{
             background-color: var(--green);
@@ -49,30 +52,32 @@
             padding: 1em;
         }
 
-        header nav{
+        /* HEADER > CONTAINER */        
+        header nav.nav_container{
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
         }
 
-        header nav.logo{
-            height: auto;
-        }
-
+        /* HEADER > NAV.NAV_CONTAINER (LINKS)*/
         header * a.link{
-            display: none;
+            display: none; 
         }
 
-        header nav button.btn_menu{
+        /* HEADER > NAV.NAV_CONTAINER > BUTTON.BTN_MENU */
+        header nav.nav_container button.btn_menu{
             height: 48px;
             width: 48px;
 
             background-color: var(--green);
+            background-image: url(images/menu_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 70%;
+
             border: .1em #000 solid;
             border-radius: 5px;
-
-            padding: 6px;
 
             display: flex;
             align-content: center;
@@ -80,12 +85,11 @@
         }
 
         /* MAIN ----------------------------------------------------------------------------------------------------------- */
-
         main{
             padding: 1.2em 1em;
         }
-        /* MAIN > BANNER ----------------------------------------------------------------------------------------------------------- */
-
+        
+        /* MAIN > FIGURE.BANNER */
         main figure.banner{
             background-color: #ccc;
             background-image: url(images/landing-page-banner.jpg);
@@ -103,6 +107,7 @@
             gap: .8em;
         }
 
+        /* MAIN > FIGURE.BANNER > TEXT / FONT */
         main figure.banner *{
             color: #fff;
         }
@@ -115,8 +120,7 @@
             border-color: #fff;
         }
 
-        /* - SECTION > CARDS ----------------------------------------------------------------------------------------------------------- */
-
+        /* MAIN > SECTION.CARDS */
         section.section_cards{
             display: flex;
             flex-direction: row;
@@ -130,10 +134,12 @@
             margin: 2em 0 4em 0;
         }
 
+        /* MAIN > SECTION.CARDS > ARTICLE.CARD */
         section.section_cards article.card{
             width: 80%;
         }
 
+        /* MAIN > SECTION.CARDS > ARTICLE.CARD > FIGURE.IMG_CONTAINER */
         section.section_cards article.card figure.img_container{
             overflow: hidden;
             height: 6.5em;
@@ -141,6 +147,7 @@
             text-align: center;
         }
 
+        /* MAIN > SECTION.CARDS > ARTICLE.CARD > MAIN.TEXT_CONTAINER */
         section.section_cards article.card main.text_container{
             max-height: fit-content;
             display: flex;
@@ -161,13 +168,13 @@
             color: #777;
         }
 
+        /* MAIN > SECTION.CARDS > ARTICLE.CARD > A.BTN */
         section.section_cards article.card a.btn{
             border-color: var(--green);
             color: var(--green);
         }
 
         /* FOOTER ----------------------------------------------------------------------------------------------------------- */
-
         footer{
             background-color: #222;
 
@@ -178,6 +185,7 @@
             padding: 1em;
         }
 
+        /* FOOTER > P.FOOTER_TEXT */
         footer p.footer_text{
             display: none;   
             color: #888;
@@ -186,23 +194,24 @@
             padding-top: .5em;
         }
 
-        footer figure.icons_container{
+        /* FOOTER > NAV.ICONS_CONTAINER */
+        footer nav.icons_container{
             display: flex;
             flex-direction: row;
             gap: .4em;
         }
 
-        /* ----------------------------------------------------------------------------------------------------------- */
+        /* ------------------------------------------------------------------------------------------------------------------------------ */
 
-        /* BREAKPOINT M ----------------------------------------------------------------------------------------------------------- */
 
+        /* ** BREAKPOINT M ** ----------------------------------------------------------------------------------------------------------- */
         @media screen and (min-width: 768px){
-
-            /* HEADER ----------------------------------------------------------------------------------------------------------- */
+            /* HEADER ------------------------------------------------------------------------------------------------------------------- */
             header{
                 padding: 1.6em 3.2em 1.6em 1.6em;
             }
 
+            /* HEADER > LINKS */
             header * a.link{
                 display: flex;
                 padding-top: .6em;
@@ -211,29 +220,34 @@
                 font-weight: 600;
             }
 
+            /* HEADER > NAV.NAV_CONTAINER > NAV.LINK_CONTAINER */
             header nav.nav_container nav.link_container{
                 display: flex;
                 gap: 1.6em;
             }
 
-            header nav button.btn_menu{
+            header nav.nav_container nav.link_container a.link{
+                line-height: 2.3em;
+            }
+
+            /* HEADER > NAV.NAV_CONTAINER > BUTTON.BTN_MENU */
+            header nav.nav_container button.btn_menu{
                 display: none;
             }
 
-            /* MAIN ----------------------------------------------------------------------------------------------------------- */
-
+            /* MAIN --------------------------------------------------------------------------------------------------------------- */
             main{
                 padding: 1.9em 2em;
             }
 
-            /* MAIN > BANNER ----------------------------------------------------------------------------------------------------------- */
-
+            /* MAIN > FIGURE.BANNER */
             main figure.banner{
                 padding-right: 40%;
 
                 gap: 1em;
             }
 
+            /* MAIN > FIGURE.BANNER > TEXT / FONT */
             main figure.banner h1{
                 font-size: 3em;
                 line-height: 1.2em;
@@ -243,51 +257,47 @@
                 margin-bottom: 1.6em;
             }
 
-            /* - SECTION > CARDS ----------------------------------------------------------------------------------------------------------- */
-
+            /* MAIN > SECTION.CARDS > ARTICLE.CARD */
             section.section_cards article.card{
                 width: 40%;
             }
 
             /* FOOTER ----------------------------------------------------------------------------------------------------------- */
-
             footer{
                 justify-content: space-between;
 
                 padding: 2em 4em ;
             }
 
+            /* FOOTER > P.FOOTER_TEXT */
             footer p.footer_text{
                 display: flex;
             }
 
-            footer figure.icons_container{
+            /* FOOTER > NAV.ICONS_CONTAINER */
+            footer nav.icons_container{
                 gap: .6em;
             }
 
-            /* ----------------------------------------------------------------------------------------------------------- */      
+            /* ------------------------------------------------------------------------------------------------------------------- */      
         }
 
-        /* BREAKPOINT L ----------------------------------------------------------------------------------------------------------- */
 
+        /* ** BREAKPOINT L ** ---------------------------------------------------------------------------------------------------- */
         @media screen and (min-width: 1100px){
-
-            /* HEADER ----------------------------------------------------------------------------------------------------------- */
-
-            /* MAIN ----------------------------------------------------------------------------------------------------------- */
-
+            /* MAIN -------------------------------------------------------------------------------------------------------------- */
             main{
                 padding: 2em 2em;
             }
 
-            /* MAIN > BANNER ----------------------------------------------------------------------------------------------------------- */
-
+            /* MAIN > FIGURE.BANNER */
             main figure.banner{
                 padding-right: 50%;
 
                 gap: 1em;
             }
 
+            /* MAIN > FIGURE.BANNER > TEXT / FONT */
             main figure.banner h1{
                 font-size: 3.2em;
                 line-height: 1em;
@@ -297,40 +307,99 @@
                 margin-bottom: 1em;
             }
 
-            /* - SECTION > CARDS ----------------------------------------------------------------------------------------------------------- */
-
+            /* MAIN > SECTION.CARDS > ARTICLE.CARD */
             section.section_cards article.card{
                 width: 18%;
-            }
+            }  
 
-            /* FOOTER ----------------------------------------------------------------------------------------------------------- */    
+            /* ------------------------------------------------------------------------------------------------------------------- */  
         }
 
+        /* ANIMATIONS / TRANSFORMS */
+
+        a.btn, a.link, header nav.nav_container button.btn_menu{
+            transition: .1s ease-out 50ms;
+        }
+
+        a.link:hover{
+            color: var(--orange);
+        }
+
+        a.link:active{
+            color: #fff;
+            text-shadow: 0 0 10px #fff;
+        }
+
+        header nav.nav_container button.btn_menu:hover{
+            cursor: pointer;
+            background-image: url(images/menu_24dp_24d56d17_FILL0_wght400_GRAD0_opsz.svg);
+
+            transition: 10ms;
+        }
+
+        header nav.nav_container button.btn_menu:active{
+            background-color: var(--orange);
+            background-image: url(images/menu_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg);
+        }
+
+        main figure.banner a.btn:hover, section.section_cards article.card a.btn:hover{
+            color: var(--orange);
+            border-color: var(--orange);
+        }
+
+        main figure.banner a.btn:active{
+            color: #fff;
+            text-shadow: 0 0 10px #fff;
+            border-color: #fff;
+            box-shadow: 0 0 10px #fff;
+        }
+
+        section.section_cards article.card a.btn:active{
+            color: var(--green);
+            text-shadow: 0 0 10px var(--green);
+            border-color: var(--green);
+            box-shadow: 0 0 10px var(--green);
+        }
+        
+        /* ------------------------------------------------------------------------------------------------------------------- */
     </style>
 </head>
-<body> <!-- ter em atenção o nome de algumas classes que nao estao em uso ou em uso incompleto-->
+<body>
+
     <header>
-        <nav class="nav_container">                     
-            <nav class="link_container">  
+
+        <!-- HEADER > NAV.NAV_CONTAINER ----------------------------------------------------------------------------------->
+        <nav class="nav_container">   
+
+            <nav class="link_container">
+
                 <a href="#" class="logo"><img src="images/ui/Logo.png" alt="logo"></a>  
 
                 <a href="#" class="link">New Features</a>
                 <a href="#" class="link">Gallery</a>
                 <a href="#" class="link">Articles</a>                
-            </nav>     
-            <a href="#" class="link">Contact</a>       
-            <button class="btn_menu"><img src="images/menu_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg" alt="menu" class="btn_menu-img"></button>
+            </nav>
+
+            <a href="#" class="link">Contact</a>
+
+            <!-- HEADER > NAV.NAV_CONTAINER > BUTTON.BTN_MENU --------------------------------------------------------------->
+            <button class="btn_menu"></button>
         </nav>
     </header>
 
     <main>
+
+        <!-- MAIN > FIGURE.BANNER ------------------------------------------------------------------------------------------>
         <figure class="banner">
             <h1>Design with Bootstrap</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates repellat incidunt quibusdam quidem impedit amet vero minima.</p>
             <a href="#" class="btn">New Features</a>
         </figure>
 
+
+        <!-- MAIN > SECTION.CARDS ------------------------------------------------------------------------------------------>
         <section class="section_cards">
+            
             <article class="card">
                 <figure class="img_container">
                     <img src="images/Responsive.png" alt="Responsive">
@@ -377,12 +446,18 @@
         </section>
     </main>
 
+    <!-- FOOTER -------------------------------------------------------------------------------------------->
     <footer>
+
         <p class="footer_text">Learn to build websites using CSS</p>
-        <figure class="icons_container">
-            <img src="images/ui/icon_facebook.png" alt="facebook" class="icon_s"><img src="images/ui/icon_twitter.png" alt="twitter" class="icon_s"><img src="images/ui/icon_google.png" alt="google" class="icon_s">
-        </figure>
+
+        <nav class="icons_container">
+            <a href="#"><img src="images/ui/icon_facebook.png" alt="facebook" class="icon_s"></a>
+            <a href="#"><img src="images/ui/icon_twitter.png" alt="twitter" class="icon_s"></a>
+            <a href="#"><img src="images/ui/icon_google.png" alt="google" class="icon_s"></a>            
+        </nav>
     </footer>
 
+    <!------------------------------------------------------------------------------------------------------>
 </body>
 </html>
