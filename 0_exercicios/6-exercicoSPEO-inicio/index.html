@@ -35,6 +35,7 @@
             --weight_m: 400;
             --weight_l: 500;
             --weight_xl: 700;
+
             --size_12: 12px;
             --size_15: 15px;
             --size_16: 16px;
@@ -54,8 +55,6 @@
             font-family: Lato, Arial, Helvetica, sans-serif;
             font-size: var(--size_16);
             line-height: var(--size_24);
-
-            color: palevioletred;
         }
 
         *{
@@ -67,10 +66,18 @@
             color: var(--shade_4);
         }
 
+        h1, a{
+            font-weight: var(--weight_l);line-height: var(--size_35);
+
+            text-transform: uppercase;
+        }
+
         h1{
-            font-weight: var(--weight_l);
             font-size: var(--size_32);
-            line-height: var(--size_35);
+        }
+
+        a{
+            font-size: var(--size_24);
         }
 
         section h1{
@@ -123,46 +130,90 @@
 
         /* header -------------------------- */
 
-        header{
-            display: grid;
-            grid-template-rows: 6;
-            grid-template-columns: ;
-
-            background-color: var(--shade_2);
-            
-            background-image: url(images/index-banner.jpg);
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-
         header *{
             color: var(--shade_0);
         }
 
-        header img.logo_xl{
+        /* header > figure.banner -------------------------- */
+        header figure.banner{
+            background-color: var(--shade_2);
+            background-image: url(images/index-banner.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            height: 50vh;
+
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            justify-content:flex-end;
+            align-items: stretch; 
+            
+            text-align: center;
         }
 
-        header nav{
-            display: grid;
-            grid: ;
+        header figure.banner img.logo_xl{
+            min-width: 400px;
+            width: 30%;
+
+            display: flex;
+            align-self: center;
         }
+
+        header figure.banner h1.banner_txt{
+            font-size: var(--size_20);
+
+            display: flex;
+            align-self: center;
+        }
+
+        header figure.banner nav.banner_nav{
+            display: flex;
+            flex-direction: row;
+            align-items: end;
+            justify-content: center;
+            width: 100%;
+        }
+
+        header figure.banner nav.banner_nav img.mouse{
+            height: 100px;
+        }
+
+        header figure.banner nav.banner_nav a.link_tab{
+            background-color: rgba(255, 255, 255, .5);
+
+            width: 100%;
+            height: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }      
         
-        /* nav -------------------------- */
+        /* header > header_nav -------------------------- */
 
-        nav.nav{
+        header nav.header_nav{
             background-color: var(--shade_3);
-            height: 9vh;
+            
 
             display: grid;
             grid-template-columns: repeat(6 / 10wh);
             grid-template-rows: 20% 50% 30%;
         }
 
-        nav.nav *{
+        nav.header_nav *{
             color: var(--shade_0);
             text-decoration: none;
         }
+
+        header nav.header_nav img.logo_m{
+            width: 15%;
+            padding: var(--size_16);
+
+            display: flex;
+        }
+
         
         /* main -------------------------- */
 
@@ -346,112 +397,113 @@
 
 <body>
     <header>
-        <img src="images/LogotipoSPEO.png" alt="logo_xl" class="logo_xl">
-        <h1>sociedade portuguesa para o estudo da obesidade</h1>
+        <figure class="banner">
+            <img src="images/LogotipoSPEO.png" alt="logótipo SPEO" class="logo_xl">
+            <h1 class="banner_txt">sociedade portuguesa para o estudo da obesidade</h1>
 
-        <nav>
-            <a href="#">sobre a speo</a>
-            <a href="#">membros</a>
-            <img src="" alt="mouse">
-            <span class="line"></span>
-        </nav>
-        
+            <nav class="banner_nav">
+                <a href="#" class="link_tab">sobre a speo</a>
+                <img src="images/icons/IconMouse.png" alt="mouse" class="mouse">
+                <a href="#" class="link_tab">membros</a>                
+            </nav>
+        </figure>
+
+        <nav class="header_nav">
+            <img src="images/LogotipoSPEO.png" alt="logótipo SPEO" class="logo_m">
+            <a href="#" class="link">en</a>
+            <a href="#" class="link">speo</a>
+            <a href="#" class="link">destaques</a>
+            <a href="#" class="link">actividades</a>
+            <a href="#" class="link">membros</a>
+        </nav>        
     </header>
-
-    <nav class="nav">
-        <img src="" alt="logo_m" class="">
-        <a href="#">en</a>
-        <a href="#">speo</a>
-        <a href="#">destaques</a>
-        <a href="#">actividades</a>
-        <a href="#">membros</a>
-    </nav>
 
     <main>
         <article>
             <h1>speo</h1>
 
             <p>Fundada em 1989, a Sociedade Portuguesa para o Estudo da Obesidade (SPEO), com sede em Lisboa, tem como objectivo principal promover a investigação e a divulgação de conhecimento relacionado com a obesidade e os aspectos com ela relacionados, com relevância para a sociedade e comunidade científica (p.ex., epidemiologia, comportamento alimentar e actividade física, complicações médicas, etc.).</p>
-            <p>A organização de reuniões científicas, nomeadamente o Congresso Português de Obesidade, assumem para a SPEO um papel decisivo na sua esfera de acção e muitos dos seus recursos são dedicados a este evento anual. A SPEO assegura também a representação nacional das sociedades científica e organizações afins internacionais dedicadas ao tema da obesidade, como a International Society for the Study of Obesity, e a European Association for the Study of Obesity.</p>~
 
-            <a href="#">ler mais</a>
+            <p>A organização de reuniões científicas, nomeadamente o Congresso Português de Obesidade, assumem para a SPEO um papel decisivo na sua esfera de acção e muitos dos seus recursos são dedicados a este evento anual. A SPEO assegura também a representação nacional das sociedades científica e organizações afins internacionais dedicadas ao tema da obesidade, como a International Society for the Study of Obesity, e a European Association for the Study of Obesity.</p>
+
+            <a href="#" class="btn">ler mais</a>
         </article>
 
         <section class="destaques">
+            <h1>destaques</h1>
 
-            <h1>destaques</h1>            
-
-            <div class="noticias">
-
+            <section class="noticias">
                 <h2>noticias</h2>
 
-                <nav class="cards nav_noticias">                
+                <nav class="nav_cards nav_noticias">
 
-                <a href="#" class="card_img card">
-                    <img src="images/Imagem01N.png" alt="#">
-                    <article class="composition">
-                        <article class="h1_p">
-                            <h1>ico/eco 2020 to be held in dublin</h1>
+                    <a href="#" class="noticias_card card">
+                        <figure class="card_img"></figure>
+                        <article class="card_des">
+                            <article class="card_txt">
+                                <h1>ico/eco 2020 to be held in dublin</h1>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatum odit quod enim id provident!</p>
+                            </article>
+                            <h2 class="card_date">12 jul 2017</h2>
+                        </article>
+                    </a>
+    <!--
+                    <a href="#" class="card_img card">
+                        <img src="images/stomach.png" alt="#">
+                        <article class="composition">
+                            <article class="h1_p">
+                            <h1>obesidade infantil</h1>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatum odit quod enim id provident!</p>
                         </article>
-                        <h2>12 jul 2017</h2>
-                    </article>
-                </a>
-    
-                <a href="#" class="card_img card">
-                    <img src="images/stomach.png" alt="#">
-                    <article class="composition">
-                        <article class="h1_p">
-                        <h1>obesidade infantil</h1>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatum odit quod enim id provident!</p>
-                    </article>
-                        <h2>18 set 2017</h2>
-                    
-                    </article>
-                </a>
-    
-                <a href="#" class="card_img card">
-                    <img src="images/wod_logo.png" alt="#">
-                    <article class="composition">
+                            <h2>18 set 2017</h2>
                         
-                        <h1>wolrd obesity day</h1>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatum odit quod enim id provident!</p>
-                    
-                        <h2>25 out 2017</h2>
-                    
-                    </article>
-                </a>
+                        </article>
+                    </a>
     
-                <a href="#" class="card_img card">
-                    <img src="images/ImagemDestaque.jpg" alt="#">
-                    <article class="composition">
-                        <article class="h1_p">
-                        <h1>21º congresso português de obesidade</h1>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatum odit quod enim id provident!</p>
-                    </article>
-                        <h2>24 nov 2017</h2>
+                    <a href="#" class="card_img card">
+                        <img src="images/wod_logo.png" alt="#">
+                        <article class="composition">
+                            
+                            <h1>world obesity day</h1>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatum odit quod enim id provident!</p>
+                        
+                            <h2>25 out 2017</h2>
+                        
+                        </article>
+                    </a>
+    
+                    <a href="#" class="card_img card">
+                        <img src="images/ImagemDestaque.jpg" alt="#">
+                        <article class="composition">
+                            <article class="h1_p">
+                            <h1>21º congresso português de obesidade</h1>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatum odit quod enim id provident!</p>
+                        </article>
+                            <h2>24 nov 2017</h2>
+                        
+                        </article>
+                    </a>  
                     
-                    </article>
-                </a>                
-            </nav>
-            </div>
+                    -->
+                </nav>
+            </section>
 
-            <div class="imprensa">
+            <section class="imprensa">
 
                 <h2>imprensa</h2>
 
                 <nav class="nav_cards nav_imprensa">                
 
-                    <a href="#" class="card">
-                        <article class="composition">
-                            <article class="h1_p">
-                            <h1>jornal i</h1>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio et iste, harum ea eius accusamus.</p>
-                        </article>
-                            <h2>28 jun 2017</h2>
+                    <a href="#" class="imprensa_card card">
+                        <article class="card_des">
+                            <article class="card_txt">
+                                <h1>jornal i</h1>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio et iste, harum ea eius accusamus.</p>
+                            </article>
+                            <h2 class="card_date">28 jun 2017</h2>
                         </article>
                     </a>
-
+<!--
                     <a href="#" class="card">
                         <article class="composition">
                             <article class="h1_p">
@@ -481,8 +533,10 @@
                             <h2>17 nov 2017</h2>
                         </article>
                     </a>
+
+                    -->
                 </nav>
-            </div>               
+            </section>               
         </section>
 
         <section class="newsletter">

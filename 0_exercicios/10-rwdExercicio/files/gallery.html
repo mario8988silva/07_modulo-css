@@ -106,6 +106,18 @@
             display: none;
         }
 
+        main.main_gallery figure.img2{
+            background-image: url(../images/gallery-sm-1.jpg);
+        }
+
+        main.main_gallery figure.img3{
+            background-image: url(../images/gallery-sm-2.jpg);
+        }
+
+        main.main_gallery figure.img4{
+            background-image: url(../images/gallery-sm-3.jpg);
+        }
+
         main.main_gallery{
             margin-bottom: 6em;
         }
@@ -135,20 +147,20 @@
             .arrow{
             height: 58px;
             width: 58px;
-        }
+            }
 
             .circle_nav{
             height: 20px;
             width: 20px;   
-        }
+            }
 
         main.main_gallery figure.articles_banner{
             margin-bottom: .8em;
-        }
+            }
 
         main.main_gallery{
             gap: .8em;
-        }       
+            }       
 
         }
 
@@ -170,8 +182,19 @@
             main.main_gallery{
                 display: grid;
                 grid-template-columns: 3, 1fr;
-                grid-template-rows: 1fr .5fr 1fr;  
+                grid-template-rows: 1fr .2fr 1fr;  
                 column-gap: 1em;
+            }
+
+            main.main_gallery figure.articles_banner{
+                height: auto;
+            }
+
+            main.main_gallery figure.articles_banner figure.banner{            
+                background-image: url(../images/gallery-3.jpg);
+
+                height: 30vh;
+                border-radius: 20px;
             }
 
             main figure.banner{            
@@ -180,14 +203,15 @@
                 padding: 0;                
                 margin: 0;         
             }
+            
 
             main.main_gallery figure.img1{
                 grid-column: span 3;
             }
 
-            main.main_gallery figure.img1 figure.banner{
-                padding: 30% 0 0 0;
-                margin: 0;
+            main.main_gallery figure.banner{
+                min-height: 10vh;
+                border-radius: 0;               
             }        
 
             main.main_gallery article.artc1{
