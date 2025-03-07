@@ -197,9 +197,16 @@
             background-color: var(--shade_3);
             
 
+            /*
             display: grid;
             grid-template-columns: repeat(6 / 10wh);
             grid-template-rows: 20% 50% 30%;
+            */
+            display: flex;
+            flex-direction: row;
+
+            height: 10em;
+            padding: 0 5%;
         }
 
         nav.header_nav *{
@@ -207,12 +214,76 @@
             text-decoration: none;
         }
 
-        header nav.header_nav img.logo_m{
-            width: 15%;
-            padding: var(--size_16);
+        header nav.header_nav figure.logo_m{
+            background-color: red;
 
             display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            flex: 1;
         }
+
+        header nav.header_nav figure.logo_m img{
+            height: 80%;
+            width: min-content;
+            background-color: blue;
+        }
+
+        header nav.header_nav nav.nav_link{
+            display: flex;
+            flex-direction: column;
+
+            flex: 1;            
+
+            background-color: greenyellow;
+        }
+
+        .top_link{
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+        }
+
+        header nav.header_nav nav.nav_link ul.top_link li a.link_en{
+            font-size: var(--size_14);
+            font-weight: var(--weight_xl);
+
+            background-color: var(--r);
+            padding: .5em 1em;
+        }
+
+        .btm_link{
+            height: 100%;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: end;
+            
+
+            padding-left: 6em;
+
+            background-color: palevioletred;
+        }
+
+        header nav.header_nav ul li a.link{
+            background-color: blue;            
+        }
+
+        header nav.header_nav ul div.nav_r{
+            background-color: yellow;
+        }
+
+        header nav.header_nav ul li a.link_memb{
+            background-color: purple;
+
+            margin-left: 6em;
+        }
+
+
+
+
 
         
         /* main -------------------------- */
@@ -409,12 +480,24 @@
         </figure>
 
         <nav class="header_nav">
-            <img src="images/LogotipoSPEO.png" alt="logótipo SPEO" class="logo_m">
-            <a href="#" class="link">en</a>
-            <a href="#" class="link">speo</a>
-            <a href="#" class="link">destaques</a>
-            <a href="#" class="link">actividades</a>
-            <a href="#" class="link">membros</a>
+            <figure class="logo_m">
+                <img src="images/LogotipoSPEO.png" alt="logótipo SPEO">
+            </figure>
+            
+            <nav class="nav_link">
+                <ul class="top_link">
+                    <li><a href="#" class="link link_en">en</a></li>
+                </ul>
+                
+                <ul class="btm_link">
+                    <li><a href="#" class="link link_speo">speo</a></li>
+                    <li><a href="#" class="link link_dest">destaques</a></li>
+                    <li><a href="#" class="link link_act">actividades</a></li>
+                    <li><a href="#" class="link link_memb">membros</a></li>
+                </ul>
+                
+            </nav>
+            
         </nav>        
     </header>
 
