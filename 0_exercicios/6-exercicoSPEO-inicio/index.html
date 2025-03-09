@@ -62,8 +62,11 @@
         }
 
         h1, h2{
-            text-transform: uppercase;
             color: var(--shade_4);
+        }
+
+        h1{
+            text-transform: uppercase;
         }
 
         h1, a{
@@ -72,24 +75,28 @@
             text-transform: uppercase;
         }
 
-        h1{
-            font-size: var(--size_32);
-        }
-
         a{
             font-size: var(--size_24);
         }
 
+        /*
         section h1{
             border-bottom: 5px solid var(--r);
         }
+        */
 
         h2{
             font-size: var(--size_18);
             line-height: var(--size_31);
         }
 
+        strong{
+            font-weight: var(--weight_xl);
+            color: var(--shade_4);
+        }
+
         p{
+            line-height: var(--size_22);
             color: var(--shade_2);
         }
 
@@ -142,7 +149,9 @@
             background-repeat: no-repeat;
             background-position: center;
 
+            /*
             height: 50vh;
+            */
 
             display: flex;
             flex-direction: column;
@@ -155,7 +164,9 @@
 
         header figure.banner img.logo_xl{
             min-width: 400px;
-            width: 30%;
+            width: 40%;
+            margin-top: 15%;
+            
 
             display: flex;
             align-self: center;
@@ -164,6 +175,8 @@
         header figure.banner h1.banner_txt{
             font-size: var(--size_20);
 
+            margin-bottom: 5%;
+
             display: flex;
             align-self: center;
         }
@@ -171,31 +184,58 @@
         header figure.banner nav.banner_nav{
             display: flex;
             flex-direction: row;
-            align-items: end;
+            align-items: stretch;
             justify-content: center;
+            
             width: 100%;
+        }
+
+        div.container{
+            display: flex;
+            flex-direction: row;
+
+            width: 100%;
+        }
+        
+        div.corner{
+            height: 60%;
+            width: 100px;
+
+            display: flex;
+            align-self: flex-end;
+        }
+
+        div.corner_l{
+            background: linear-gradient(-135deg, transparent 25px, rgba(255, 255, 255, .5) 0);
         }
 
         header figure.banner nav.banner_nav img.mouse{
             height: 100px;
         }
 
-        header figure.banner nav.banner_nav a.link_tab{
-            background-color: rgba(255, 255, 255, .5);
+        div.corner_r{
+            background: linear-gradient(135deg, transparent 25px, rgba(255, 255, 255, .5) 0);
+        }
 
+        header figure.banner nav.banner_nav a.link_tab{
+            
+            background-color: rgba(255, 255, 255, .5);
+   
             width: 100%;
-            height: 50%;
+            height: 60%;
 
             display: flex;
             justify-content: center;
             align-items: center;
+            align-self: flex-end;
         }      
+
+
         
         /* header > header_nav -------------------------- */
 
         header nav.header_nav{
-            background-color: var(--shade_3);
-            
+            background-color: var(--shade_3);            
 
             /*
             display: grid;
@@ -203,88 +243,84 @@
             grid-template-rows: 20% 50% 30%;
             */
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
 
-            height: 10em;
             padding: 0 5%;
+            padding-bottom: .5em;
         }
 
-        nav.header_nav *{
+        header nav.header_nav *{
             color: var(--shade_0);
             text-decoration: none;
         }
 
-        header nav.header_nav figure.logo_m{
-            background-color: red;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-            flex: 1;
-        }
-
-        header nav.header_nav figure.logo_m img{
-            height: 80%;
-            width: min-content;
-            background-color: blue;
-        }
-
-        header nav.header_nav nav.nav_link{
-            display: flex;
-            flex-direction: column;
-
-            flex: 1;            
-
-            background-color: greenyellow;
-        }
-
-        .top_link{
+        header nav.header_nav div.nav_row1{
             display: flex;
             flex-direction: row;
             justify-content: end;
         }
 
-        header nav.header_nav nav.nav_link ul.top_link li a.link_en{
+        header nav.header_nav div.nav_row1 a.link_en{
             font-size: var(--size_14);
             font-weight: var(--weight_xl);
 
             background-color: var(--r);
-            padding: .5em 1em;
+            padding: .1em 1em;
         }
 
-        .btm_link{
+        header nav.header_nav div.nav_row2{
+            display: flex;
+            flex-direction: row;
+        }
+
+        header nav.header_nav div.nav_row2 figure.logo_m{
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+
+            width: 50%;
+        }
+
+        header nav.header_nav div.nav_row2 figure.logo_m img{
+
+            height: 80px;
+            width: max-content;
+
+            padding-bottom: 2%;            
+        }
+
+        header nav.header_nav div.nav_row2 nav.nav_link{
+            display: flex;
+            flex-direction: column;
+
+            width: 50%;         
+        }        
+
+        header nav.header_nav div.nav_row2 nav.nav_link ul.btm_link{
+
             height: 100%;
 
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items: end;
-            
+            gap: 2vw;            
 
-            padding-left: 6em;
-
-            background-color: palevioletred;
+            padding-left: 6vw;
         }
 
-        header nav.header_nav ul li a.link{
-            background-color: blue;            
+        header nav.header_nav div.nav_row2 nav.nav_link ul.btm_link li a{
+            padding-bottom: .2em;
+            transition-duration: 100ms;
         }
 
-        header nav.header_nav ul div.nav_r{
-            background-color: yellow;
+        header nav.header_nav div.nav_row2 nav.nav_link ul.btm_link li a:hover{
+            border-bottom: .3em solid var(--r);
         }
 
-        header nav.header_nav ul li a.link_memb{
-            background-color: purple;
-
-            margin-left: 6em;
-        }
-
-
-
-
-
+        header nav.header_nav div.nav_row2 nav.nav_link ul.btm_link a.link_memb{
+            margin-left: 6vw;
+        }        
         
         /* main -------------------------- */
 
@@ -293,8 +329,64 @@
         }
         
         /* article -------------------------- */
+
+        main{
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+        }
+
+        main article, main section.destaques, main section.newsletter, main section.parceiros{
+            margin-top: 2em;
+            display: flexbox;
+            justify-items: center;
+
+        }
+
+        article.h1_container{
+            width: 100px;
+            border-bottom: 5px solid var(--r);
+
+            margin-bottom: 4em;
+        }
+
+        h1.section_h1{
+            /*
+            font-size: 3em;
+            line-height: 1.5em;
+            border-bottom: .12em solid var(--r);
+            /*
+            text-decoration: .2em underline var(--r);
+            *//*
+            margin-bottom: 1.4em;
+
+            display: block;
+
+            */
+            font-size: 3em;
+            line-height: 1.5em;            
+
+        }
+
+        main article p{
+            color: var(--shade_3);
+            margin-bottom: 1.2em;
+        }
+
+        .btn{
+            background-color: var(--r);
+
+            font-size: var(--size_16);
+            font-weight: var(--weight_xl);
+            color: var(--shade_0);
+            
+            padding: .2em 2em;
+            margin: 4em 0 2em;
+
+            display: block;
+        }
         
-        /* div -------------------------- */
+        /* section destaques ---------------------------*/
 
         main section.destaques{
             background-color: var(--shade_1);
@@ -302,15 +394,29 @@
         
         /* section noticias -------------------------- */
 
+        /*
         main section{
             display: flex;
             flex-direction: column;
-            gap: 20px;
-            
+            gap: 20px;           
         }
 
-        nav.nav_noticias, nav.nav_imprensa{
+        */
 
+        h2.section_h2{
+            text-transform: capitalize;
+            font-size: 2em;
+            line-height: 1.5em; 
+
+            width: 50px;
+            border-bottom: 5px solid var(--r);
+
+            margin-bottom: 1em;
+            
+            background-color: blue;
+        }
+
+        main nav.noticias, nav.nav_cards{
             display: flex;
             flex-direction:row;
             flex-wrap: wrap;
@@ -319,6 +425,8 @@
             justify-content: center;
 
             gap: var(--size_35);
+
+            margin-bottom: 20vh;
         }
 
         a.card{
@@ -402,7 +510,7 @@
         /* section parceiros -------------------------- */
 
         main section.parceiros{
-            display:flex;
+            display: flex;
             flex-direction: column;
         }
 
@@ -473,55 +581,70 @@
             <h1 class="banner_txt">sociedade portuguesa para o estudo da obesidade</h1>
 
             <nav class="banner_nav">
-                <a href="#" class="link_tab">sobre a speo</a>
+                <div class="container">
+                    <a href="#" class="link_tab">sobre a speo</a>
+                    <div class="corner corner_l"></div>  
+                </div>              
                 <img src="images/icons/IconMouse.png" alt="mouse" class="mouse">
-                <a href="#" class="link_tab">membros</a>                
+                <div class="container">
+                    <div class="corner corner_r"></div>
+                    <a href="#" class="link_tab">membros</a> 
+                </div>
+                               
             </nav>
         </figure>
 
         <nav class="header_nav">
-            <figure class="logo_m">
-                <img src="images/LogotipoSPEO.png" alt="logótipo SPEO">
-            </figure>
+
+            <div class="nav_row1">
+                <a href="#" class="link link_en">en</a>                
+            </div>
             
-            <nav class="nav_link">
-                <ul class="top_link">
-                    <li><a href="#" class="link link_en">en</a></li>
-                </ul>
+            <div class="nav_row2">
+
+                <figure class="logo_m">
+                    <img src="images/LogotipoSPEO.png" alt="logótipo SPEO">
+                </figure>
                 
-                <ul class="btm_link">
-                    <li><a href="#" class="link link_speo">speo</a></li>
-                    <li><a href="#" class="link link_dest">destaques</a></li>
-                    <li><a href="#" class="link link_act">actividades</a></li>
-                    <li><a href="#" class="link link_memb">membros</a></li>
-                </ul>
-                
-            </nav>
-            
+                <nav class="nav_link">
+                    
+                    <ul class="btm_link">
+                        <li><a href="#" class="link link_speo">speo</a></li>
+                        <li><a href="#" class="link link_dest">destaques</a></li>
+                        <li><a href="#" class="link link_act">actividades</a></li>
+                        <li><a href="#" class="link link_memb">membros</a></li>
+                    </ul>                    
+                </nav>
+            </div>
         </nav>        
     </header>
 
     <main>
         <article>
-            <h1>speo</h1>
+            <article class="h1_container">
+                <h1 class="section_h1">speo</h1>
+            </article>
+                    
+            <p><strong>Fundada em 1989,</strong> a <strong>Sociedade Portuguesa para o Estudo da Obesidade (SPEO),</strong> com sede em Lisboa, tem como objectivo principal promover a investigação e a divulgação de conhecimento relacionado com a obesidade e os aspectos com ela relacionados, com relevância para a sociedade e comunidade científica (p.ex., epidemiologia, comportamento alimentar e actividade física, complicações médicas, etc.).</p>
 
-            <p>Fundada em 1989, a Sociedade Portuguesa para o Estudo da Obesidade (SPEO), com sede em Lisboa, tem como objectivo principal promover a investigação e a divulgação de conhecimento relacionado com a obesidade e os aspectos com ela relacionados, com relevância para a sociedade e comunidade científica (p.ex., epidemiologia, comportamento alimentar e actividade física, complicações médicas, etc.).</p>
-
-            <p>A organização de reuniões científicas, nomeadamente o Congresso Português de Obesidade, assumem para a SPEO um papel decisivo na sua esfera de acção e muitos dos seus recursos são dedicados a este evento anual. A SPEO assegura também a representação nacional das sociedades científica e organizações afins internacionais dedicadas ao tema da obesidade, como a International Society for the Study of Obesity, e a European Association for the Study of Obesity.</p>
+            <p>A organização de reuniões científicas, nomeadamente o <strong>Congresso Português de Obesidade,</strong> assumem para a <strong>SPEO</strong> um papel decisivo na sua esfera de acção e muitos dos seus recursos são dedicados a este evento anual. A <strong>SPEO</strong> assegura também a representação nacional das sociedades científica e organizações afins internacionais dedicadas ao tema da obesidade, como a <strong>International Society for the Study of Obesity,</strong> e a <strong>European Association for the Study of Obesity.</strong></p>
 
             <a href="#" class="btn">ler mais</a>
         </article>
 
         <section class="destaques">
-            <h1>destaques</h1>
+
+            <article class="h1_container">
+                <h1 class="section_h1">destaques</h1>
+            </article>            
 
             <section class="noticias">
-                <h2>noticias</h2>
+                <h2 class="section_h2">notícias</h2>
 
                 <nav class="nav_cards nav_noticias">
 
                     <a href="#" class="noticias_card card">
-                        <figure class="card_img"></figure>
+                        <img src="images/Imagem01N.png" alt="#">
                         <article class="card_des">
                             <article class="card_txt">
                                 <h1>ico/eco 2020 to be held in dublin</h1>
@@ -530,50 +653,45 @@
                             <h2 class="card_date">12 jul 2017</h2>
                         </article>
                     </a>
-    <!--
-                    <a href="#" class="card_img card">
+
+                    <a href="#" class="noticias_card card">
                         <img src="images/stomach.png" alt="#">
-                        <article class="composition">
-                            <article class="h1_p">
-                            <h1>obesidade infantil</h1>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatum odit quod enim id provident!</p>
-                        </article>
-                            <h2>18 set 2017</h2>
-                        
+                        <article class="card_des">
+                            <article class="card_txt">
+                                <h1>obesidade infantil</h1>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatum odit quod enim id provident!</p>
+                            </article>
+                            <h2 class="card_date">18 set 2017</h2>
                         </article>
                     </a>
-    
-                    <a href="#" class="card_img card">
+        
+                    <a href="#" class="noticias_card card">
                         <img src="images/wod_logo.png" alt="#">
-                        <article class="composition">
-                            
-                            <h1>world obesity day</h1>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatum odit quod enim id provident!</p>
-                        
-                            <h2>25 out 2017</h2>
-                        
+                        <article class="card_des">
+                            <article class="card_txt">
+                                <h1>world obesity day</h1>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatum odit quod enim id provident!</p>
+                            </article>                        
+                            <h2 class="card_date">25 out 2017</h2>                        
                         </article>
                     </a>
     
-                    <a href="#" class="card_img card">
+                    <a href="#" class="noticias_card card">
                         <img src="images/ImagemDestaque.jpg" alt="#">
-                        <article class="composition">
-                            <article class="h1_p">
-                            <h1>21º congresso português de obesidade</h1>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatum odit quod enim id provident!</p>
-                        </article>
-                            <h2>24 nov 2017</h2>
-                        
+                        <article class="card_des">
+                            <article class="card_txt">
+                                <h1>21º congresso português de obesidade</h1>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatum odit quod enim id provident!</p>
+                            </article>
+                            <h2 class="card_date">24 nov 2017</h2>
                         </article>
                     </a>  
                     
-                    -->
                 </nav>
             </section>
 
             <section class="imprensa">
-
-                <h2>imprensa</h2>
+                <h2 class="section_h2">imprensa</h2>
 
                 <nav class="nav_cards nav_imprensa">                
 
@@ -586,45 +704,47 @@
                             <h2 class="card_date">28 jun 2017</h2>
                         </article>
                     </a>
-<!--
-                    <a href="#" class="card">
-                        <article class="composition">
-                            <article class="h1_p">
-                            <h1>eurostat</h1>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                        </article>
-                            <h2>28 jun 2017</h2>
+
+                    <a href="#" class="noticias_card card">
+                        <article class="card_des">
+                            <article class="card_txt">
+                                <h1>eurostat</h1>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                            </article>
+                            <h2 class="card_date">28 jun 2017</h2>
                         </article>
                     </a>
 
-                    <a href="#" class="card">
-                        <article class="composition">
-                            <article class="h1_p">
-                            <h1>yahoo news</h1>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio et iste, harum ea eius accusamus. Adipisicing.</p>
-                        </article>
-                            <h2>28 set 2017</h2>
-                        </article>
-                    </a>
-
-                    <a href="#" class="card">
-                        <article class="composition">
-                            <article class="h1_p">
-                            <h1>expresso</h1>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio et iste, harum ea eius accusamus, harum ea eius.</p>
-                        </article>
-                            <h2>17 nov 2017</h2>
+                    <a href="#" class="noticias_card card">
+                        <article class="card_des">
+                            <article class="card_txt">
+                                <h1>yahoo news</h1>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio et iste, harum ea eius accusamus. Adipisicing.</p>
+                            </article>
+                            <h2 class="card_date">28 set 2017</h2>
                         </article>
                     </a>
 
-                    -->
+                    <a href="#" class="noticias_card card">
+                        <article class="card_des">
+                            <article class="card_txt">
+                                <h1>expresso</h1>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio et iste, harum ea eius accusamus, harum ea eius.</p>
+                            </article>
+                            <h2 class="card_date">17 nov 2017</h2>
+                        </article>
+                    </a>
+
                 </nav>
             </section>               
         </section>
 
         <section class="newsletter">
 
-            <h1>newsletter</h1>
+            <article class="h1_container">
+                <h1 class="section_h1 t_nl">newsletter</h1>
+            </article>
+            
             <form action="">
                 <label for="user_mail">Gostaria de ser assinante da nossa Newsletter?<br>Insira o seu endereço de correio electrónico aqui!</label>
 
@@ -635,7 +755,10 @@
         </section>
 
         <section class="parceiros">
-            <h1>parceiros</h1>
+            <article class="h1_container">
+                <h1 class="section_h1">parceiros</h1>
+            </article>
+            
             <nav>
                 <a href="#"><img src="images/LogoSonae.png" alt="sonae" class="thumb_logo"></a>
                 <a href="#"><img src="images/LogoBayer.png" alt="bayer" class="thumb_logo"></a>
