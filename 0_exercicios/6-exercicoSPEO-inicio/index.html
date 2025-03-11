@@ -332,12 +332,11 @@
 
         main{
             display: flex;
-            flex-direction: column;
-            gap: 1em;
+            flex-direction: column;            
         }
 
-        main article, main section.destaques, main section.newsletter, main section.parceiros{
-            margin-top: 2em;
+        main article, main section.destaques{
+            margin-top: 5vh;
             display: flexbox;
             justify-items: center;
 
@@ -391,7 +390,7 @@
         main section.destaques{
             background-color: var(--shade_1);
         }
-        
+
         /* section noticias -------------------------- */
 
         /*
@@ -414,8 +413,7 @@
             margin-bottom: 1em;
         }
 
-        main section.noticias nav.nav_cards{
-            /*
+        nav.nav_cards{
             display: flex;
             flex-direction:row;
             flex-wrap: wrap;
@@ -425,11 +423,7 @@
 
             gap: var(--size_35);
 
-            margin-bottom: 20vh;
-            */
-
-            
-            background-color: red;
+            margin-bottom: 10vh;
         }
 
         a.card{/*
@@ -446,7 +440,7 @@
 
             text-transform: none;
 
-            width: 255px;
+            width: 300px;           
 
             display: flex;
             flex-direction: column;
@@ -457,13 +451,32 @@
             background-color: yellow;            
         }
 
-        a.card figure.card_img_container{
-            height: 200px;
+        a.card figure.card_img{
+            height: 300px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
 
-            background-color: purple;
+            background-color: var(--shade_2);
         }
 
-        a.card img{}
+        a.noticias_card figure.img_1{
+            background-image: url(images/Imagem01N.png);
+        }
+
+        a.noticias_card figure.img_2{
+            background-image: url(images/stomach.png);
+        }
+
+        a.noticias_card figure.img_3{
+            background-image: url(images/wod_logo.png);
+        }
+
+        a.noticias_card figure.img_4{
+            background-image: url(images/ImagemDestaque.jpg);
+            background-size: 100%;
+            background-position: center -95px;
+        }
         
         a.card:hover{
             box-shadow: 0 0 10px 2px rgba(51, 51, 51, 1);
@@ -477,19 +490,25 @@
             align-items: space-between;
             gap: 1em;
 
-            padding: 1em .8em .4em;
+            padding: 1em .8em .4em;           
             
-            border-top: 5px solid var(--r);
             */
 
             display: flex;
             flex-direction: column;
+            /*
             align-items: space-between;
-            gap: 1em;
+            */
 
-            padding: 1em .8em .4em;
+            padding: .4em .8em .4em;
+            border-top: 5px solid var(--r);
+            margin-top: 0;
+            
+            background-color: var(--shade_0);
+        }
 
-            background-color: aqua;
+        article.card_txt{
+            margin-top: 0;
         }
 
         a.card h1{
@@ -498,9 +517,12 @@
             line-height: 1.2em;            
 
             padding-right: 2em;
+            margin-bottom: .4em;
         }
 
+        /*
         a.card p{}
+        */
 
         a.card h2.card_date{
             text-transform: uppercase;
@@ -511,7 +533,7 @@
             color: var(--r);
         }
         
-                /*
+        /*
         h1, section h1, nav h1{
 
         */
@@ -522,11 +544,17 @@
         section.newsletter{
             background-color: var(--r);
             height: 50vh;
+            margin-top: 0;
 
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content:space-around;
+
+            /*
+            margin-top: ;
+            padding-top: ;
+            */
         }
 
         section.newsletter *{
@@ -678,7 +706,10 @@
                 <nav class="nav_cards nav_noticias">
 
                     <a href="#" class="noticias_card card">
+                        <figure class="card_img img_1"></figure>
+                        <!--
                         <img src="images/Imagem01N.png" alt="#">
+                        -->
                         <article class="card_des">
                             <article class="card_txt">
                                 <h1>ico/eco 2020 to be held in dublin</h1>
@@ -687,9 +718,9 @@
                             <h2 class="card_date">12 jul 2017</h2>
                         </article>
                     </a>
-<!--
+
                     <a href="#" class="noticias_card card">
-                        <img src="images/stomach.png" alt="#">
+                        <figure class="card_img img_2"></figure>
                         <article class="card_des">
                             <article class="card_txt">
                                 <h1>obesidade infantil</h1>
@@ -700,7 +731,7 @@
                     </a>
         
                     <a href="#" class="noticias_card card">
-                        <img src="images/wod_logo.png" alt="#">
+                        <figure class="card_img img_3"></figure>
                         <article class="card_des">
                             <article class="card_txt">
                                 <h1>world obesity day</h1>
@@ -711,7 +742,7 @@
                     </a>
     
                     <a href="#" class="noticias_card card">
-                        <img src="images/ImagemDestaque.jpg" alt="#">
+                        <figure class="card_img img_4"></figure>
                         <article class="card_des">
                             <article class="card_txt">
                                 <h1>21º congresso português de obesidade</h1>
@@ -720,7 +751,7 @@
                             <h2 class="card_date">24 nov 2017</h2>
                         </article>
                     </a>  
-                    -->
+
                 </nav>
             </section>
 
