@@ -426,18 +426,7 @@
             margin-bottom: 10vh;
         }
 
-        a.card{/*
-            height: 255px*2;
-            width: 255px;
-
-            display: flex;
-            flex-direction: column;
-
-            box-shadow: 0 10px 50px rgba(51, 51, 51, .1);
-            transition-delay: 150ms ease-in;
-
-            */
-
+        a.card{
             text-transform: none;
 
             width: 300px;           
@@ -448,10 +437,10 @@
             box-shadow: 0 10px 50px rgba(51, 51, 51, .1);
             transition-delay: 150ms ease-in;
 
-            background-color: yellow;            
+            background-color: transparent;            
         }
 
-        a.card figure.card_img{
+        figure.card_img{
             height: 300px;
             background-repeat: no-repeat;
             background-position: center;
@@ -478,37 +467,28 @@
             background-position: center -95px;
         }
         
+        /* CORRIGIR HOVER, SOMBRA E DATA SEMPRE NO FUNDO INDEPENDENTEMENTE DA ALTURA */
         a.card:hover{
             box-shadow: 0 0 10px 2px rgba(51, 51, 51, 1);
         }
 
-        a.card article.card_des{
-            /*
-            background-color: #fff;
-            display: flex;
-            flex-direction: column;
-            align-items: space-between;
-            gap: 1em;
-
-            padding: 1em .8em .4em;           
-            
-            */
+        article.card_des{
+            background-color: var(--shade_0);
 
             display: flex;
             flex-direction: column;
-            /*
-            align-items: space-between;
-            */
 
             padding: .4em .8em .4em;
             border-top: 5px solid var(--r);
             margin-top: 0;
-            
-            background-color: var(--shade_0);
         }
 
         article.card_txt{
             margin-top: 0;
+
+            display: flex;
+            flex-direction: column;
+            justify-items: stretch;
         }
 
         a.card h1{
@@ -524,47 +504,60 @@
         a.card p{}
         */
 
-        a.card h2.card_date{
+        h2.card_date{
             text-transform: uppercase;
 
             font-weight: 600;
             font-size: 1.1em;
 
-            color: var(--r);
+            color: var(--r);  
         }
         
-        /*
-        h1, section h1, nav h1{
-
-        */
         /* section imprensa -------------------------- */
 
         /* section newsletter -------------------------- */
         
         section.newsletter{
             background-color: var(--r);
-            height: 50vh;
+
             margin-top: 0;
 
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content:space-around;
-
-            /*
-            margin-top: ;
-            padding-top: ;
-            */
+            justify-content: space-around;
         }
 
+        article.t_nl{
+            border: none;
+        }        
+        
         section.newsletter *{
             color: var(--shade_0);
             text-align: center;
+        }
+        
+        form.form_container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2em;
+
+            margin-bottom: 10vh;
         }
 
         form div.input_box *{
             color: var(--shade_3);
             text-align: start;
+            width: 300px;
+            height: 1.5em;
+        }
+
+
+
+        label.form_txt{
+            font-size: var(--size_20);
+            line-height: var(--size_24);
         }
 
         /* nav -------------------------- */
@@ -758,7 +751,7 @@
             <section class="imprensa">
                 <h2 class="section_h2">imprensa</h2>
 
-                <nav class="nav_cards nav_imprensa">                
+                <nav class="nav_cards nav_imprensa">
 
                     <a href="#" class="imprensa_card card">
                         <article class="card_des">
@@ -770,7 +763,7 @@
                         </article>
                     </a>
 
-                    <a href="#" class="noticias_card card">
+                    <a href="#" class="imprensa_card card">
                         <article class="card_des">
                             <article class="card_txt">
                                 <h1>eurostat</h1>
@@ -780,7 +773,7 @@
                         </article>
                     </a>
 
-                    <a href="#" class="noticias_card card">
+                    <a href="#" class="imprensa_card card">
                         <article class="card_des">
                             <article class="card_txt">
                                 <h1>yahoo news</h1>
@@ -790,7 +783,7 @@
                         </article>
                     </a>
 
-                    <a href="#" class="noticias_card card">
+                    <a href="#" class="imprensa_card card">
                         <article class="card_des">
                             <article class="card_txt">
                                 <h1>expresso</h1>
@@ -806,12 +799,12 @@
 
         <section class="newsletter">
 
-            <article class="h1_container">
-                <h1 class="section_h1 t_nl">newsletter</h1>
+            <article class="h1_container t_nl">
+                <h1 class="section_h1">newsletter</h1>
             </article>
             
-            <form action="">
-                <label for="user_mail">Gostaria de ser assinante da nossa Newsletter?<br>Insira o seu endereço de correio electrónico aqui!</label>
+            <form action="" class="form_container">
+                <label for="user_mail" class="form_txt">Gostaria de ser assinante da nossa Newsletter?<br>Insira o seu endereço de correio electrónico aqui!</label>
 
                 <div class="input_box">
                     <input type="text" id="user_mail" name="user_mail" value="#">
