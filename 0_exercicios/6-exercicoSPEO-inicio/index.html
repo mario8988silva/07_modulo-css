@@ -104,19 +104,6 @@
             color: var(--r);
         }
 
-        .icon_m{
-            height: var(--size_28);
-            padding: var(--size_24);
-
-            background-color: red;
-        }
-
-        .icon_s{
-            height: var(--size_16);
-            width: var(--size_16);
-            padding: var(--size_12);
-            background-color: red;
-        }
 
         /*
         section{
@@ -311,6 +298,7 @@
 
         header nav.header_nav div.nav_row2 nav.nav_link ul.btm_link li a{
             padding-bottom: .2em;
+
             transition-duration: 100ms;
         }
 
@@ -335,7 +323,7 @@
             flex-direction: column;            
         }
 
-        main article, main section.destaques{
+        main article, main section.destaques, main section.parceiros{
             margin-top: 5vh;
             display: flexbox;
             justify-items: center;
@@ -437,7 +425,7 @@
             box-shadow: 0 10px 50px rgba(51, 51, 51, .1);
             transition-delay: 150ms ease-in;
 
-            background-color: transparent;            
+            background-color: transparent;
         }
 
         figure.card_img{
@@ -541,25 +529,71 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            gap: 2em;
+            gap: 2.5em;
 
             margin-bottom: 10vh;
         }
 
+        /*
         form div.input_box *{
             color: var(--shade_3);
             text-align: start;
             width: 300px;
             height: 1.5em;
+            height: 50px;
         }
-
-
-
+        */
+        
         label.form_txt{
             font-size: var(--size_20);
             line-height: var(--size_24);
         }
 
+        div.input_box{        
+            display: flex;
+            flex-direction: row;
+
+            width: 100%;
+        }
+
+        form.form_container div.input_box input.input_user_mail{/*
+            background-image: url(images/icons/envelope_7f7f7f.svg);
+            background-repeat: no-repeat;
+            background-position: 95%;
+            */
+
+            font-size: var(--size_18);
+            color: var(--shade_3);
+            text-align: left;
+
+            width: 90%;
+
+            padding: 16px;            
+
+            border: none;
+
+            background-color: var(--shade_0);
+        }
+
+        input.input_icon{            
+            background-image: url(images/icons/envelope_7f7f7f.svg);
+            
+            background-repeat: no-repeat;
+            background-size: 70%;
+            background-position: center center;
+
+            background-color: var(--shade_0);
+
+            width: 14%;
+            height: auto;
+
+            padding-right: 5px;
+            border: none;
+        }
+
+        input.input_icon:hover{
+            cursor: pointer;
+        }
         /* nav -------------------------- */
 
         /* section parceiros -------------------------- */
@@ -567,12 +601,18 @@
         main section.parceiros{
             display: flex;
             flex-direction: column;
+            align-items: center;
+
+            margin-top: 0;
         }
 
         main section.parceiros nav{
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            flex-wrap: wrap;
+
+            width: 100%;
         }
 
         main section.parceiros a img.thumb_logo{
@@ -589,14 +629,31 @@
             flex-direction: row;
             justify-content: space-around;
             gap: var(--size_32);
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
 
             padding: 5% 10%;
+        }
+
+        footer h1{
+            font-size: var(--size_28);
+            font-weight: var(--weight_xl);
+
+            margin-bottom: 1em;
+            background-color: green;
+        }
+
+        footer a, footer li, footer label{
+            font-size: var(--size_20);
+            text-transform: none;
+
+            margin-bottom: .4em;
         }
 
         footer article{
             display: flex;
             flex-direction: column;
+
+            background-color: blueviolet;
         }
 
         footer article *{
@@ -611,18 +668,152 @@
             color: var(--r);
         }
 
-       
-        
-        
         /* article informações -------------------------- */
         footer article.info li{
-            list-style-position: outside;
+            list-style-position: inside;
             list-style-type: square;
+            text-indent: -1.4em;
+            padding-left: 1.4em;
 
             color: var(--r);
+
+            background-color: blue;
         }      
         
         /* article newsletter -------------------------- */
+
+        footer article.newsl{
+            /*
+            text-align: center;   
+            */     
+
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        footer article.newsl form.form_container{
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2em;
+
+            width: 90%;
+
+            background-color: red;
+        }
+
+        footer article.newsl form.form_container div.input_box{
+            /*
+            width: 90%;
+            */
+
+            background-color: blue;
+        }
+        footer article.newsl form.form_container div.input_box input.input_user_mail{
+            padding: 8px;
+
+            border-bottom: 4px solid var(--r);
+
+            background-color: green;
+        }
+
+        footer article.newsl form.form_container div.input_box input.input_icon{
+            background-size: 50%;
+
+            border-bottom: 4px solid var(--r);
+
+            background-color: palevioletred;
+        }
+
+        /*
+        div.corner_l{
+            background: linear-gradient(-135deg, transparent 25px, rgba(255, 255, 255, .5) 0);
+        }
+        */
+
+        footer article.newsl div.social{
+            display: flex;
+            flex-direction: row;
+            align-items: end;
+        }
+
+        footer article.newsl div.social a.icon_m-container{
+            display: flex;
+            height: fit-content;
+
+            background-color: green;
+
+        }
+
+        footer article.newsl div.social a.icon_m-container{
+            height: 120px;
+        }
+
+        footer article.newsl div.social a.icon_m-container2{
+            height: 80px;
+        }
+
+        footer article.newsl div.social a.icon_m-container img.icon_m{
+            height: 50px;
+            width: 65px;
+
+            padding: 15px;
+
+            background-color: red;
+
+            clip-path: polygon(50% -50%, 100% 50%, 50% 150%, 0 50%);
+        }
+
+
+        /* TENTATIVAS DE FAZER PERCEPÇÃO VISUAL DE CAIXA HEXAGONAL COM IMAGEM E BORDER:
+        container hexagonal maior que a imagem (hexagonal), a modos de virtualizar uma border; container hexagonal apenas com border; 
+
+        
+
+        /*
+        .icon_m{
+            height: var(--size_28);
+            padding: var(--size_24);
+
+
+            background-color: red;
+        
+        }       
+
+        */
+
+        /*
+        .hexagon {
+            --b: 50px; /* adjust to control the border  *//*
+            height: 200px; /* adjust to control the size  *//*
+            aspect-ratio: 1/cos(30deg);
+            clip-path: 
+                polygon(0 50%,50% -50%,100% 50%,50% 150%,0 50%,
+                var(--b) 50%,
+                calc(25% + var(--b)*cos(60deg)) calc(100% - var(--b)*sin(60deg)),
+                calc(75% - var(--b)*cos(60deg)) calc(100% - var(--b)*sin(60deg)),
+                calc(100% - var(--b)) 50%,
+                calc(75% - var(--b)*cos(60deg)) calc(var(--b)*sin(60deg)),
+                calc(25% + var(--b)*cos(60deg)) calc(var(--b)*sin(60deg)),
+                var(--b) 50%);
+            background: red;
+            }
+            /*
+
+        img.hexagon_img{
+            height: 100px; /* adjust to control the size  *//*
+            aspect-ratio: 1/cos(30deg);
+            clip-path: polygon(50% -50%,100% 50%,50% 150%,0 50%);
+            background: #3B8686;                }
+            */
+        .icon_s{
+            height: var(--size_16);
+            width: var(--size_16);
+            padding: var(--size_12);
+            background-color: red;
+        }
+
         
         /* article onde estamos -------------------------- */
 
@@ -807,8 +998,10 @@
                 <label for="user_mail" class="form_txt">Gostaria de ser assinante da nossa Newsletter?<br>Insira o seu endereço de correio electrónico aqui!</label>
 
                 <div class="input_box">
-                    <input type="text" id="user_mail" name="user_mail" value="#">
+                    <input type="text" id="user_mail" name="user_mail" value="Email" class="input_user_mail">
+                    <input type="submit" value="" class="input_icon">
                 </div>
+
             </form>
         </section>
 
@@ -824,8 +1017,7 @@
                 <a href="#"><img src="images/LogoLibertySeguros.png" alt="liberty" class="thumb_logo"></a>
                 <a href="#"><img src="images/LogoMedinfar.png" alt="medinfar" class="thumb_logo"></a>
             </nav>
-        </section>
-        
+        </section>        
     </main>
 
     <footer>
@@ -850,17 +1042,21 @@
         <article class="newsl">
             <h1>newsletter</h1>
 
-            <form action="#">
-                <label for="user_mail">receba a nossa Newsletter</label>
+            <form action="#" class="form_container">
+                <label for="user_mail">Receba a nossa Newsletter</label>
                 <div class="input_box">
-                    <input type="text" id="user_mail" name="user_mail" value="#">
-                </div>
+                    <input type="text" id="user_mail" name="user_mail" value="Email" class="input_user_mail">
+                    <input type="submit" value="" class="input_icon">
+                </div>                
             </form>
+            
 
             <div class="social">
-                <a href="#"><img src="images/facebook-f-brands.svg" alt="facebook" class="icon_m"></a>
-                <a href="#"><img src="images/twitter-brands.svg" alt="twiter" class="icon_m"></a>
-                <a href="#"><img src="images/youtube-brands.svg" alt="youtube" class="icon_m"></a>
+                
+                <a href="#" class="icon_m-container"><img src="images/icons/facebook-f-brands.svg" alt="facebook" class="icon_m"></a>
+                <a href="#" class="icon_m-container icon_m-container2"><img src="images/icons/twitter-brands.svg" alt="twiter" class="icon_m"></a>
+                <a href="#" class="icon_m-container"><img src="images/icons/youtube-brands.svg" alt="youtube" class="icon_m"></a>
+               
             </div>
         </article>
         
