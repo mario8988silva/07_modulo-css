@@ -59,6 +59,7 @@
 
         *{
             text-decoration: none;
+            transition-duration: 100ms;
         }
 
         h1, h2{
@@ -217,7 +218,6 @@
             align-self: flex-end;
         }      
 
-
         
         /* header > header_nav -------------------------- */
 
@@ -371,6 +371,10 @@
             margin: 4em 0 2em;
 
             display: block;
+        }
+
+        .btn:hover{
+            color: var(--shade_0);
         }
         
         /* section destaques ---------------------------*/
@@ -579,7 +583,7 @@
             background-image: url(images/icons/envelope_7f7f7f.svg);
             
             background-repeat: no-repeat;
-            background-size: 70%;
+            background-size: 50%;
             background-position: center center;
 
             background-color: var(--shade_0);
@@ -627,9 +631,9 @@
             background-color: var(--shade_3);
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
+            justify-content: space-between;
             gap: var(--size_32);
-            flex-wrap: nowrap;
+            flex-wrap: wrap;
 
             padding: 5% 10%;
         }
@@ -639,7 +643,6 @@
             font-weight: var(--weight_xl);
 
             margin-bottom: 1em;
-            background-color: green;
         }
 
         footer a, footer li, footer label{
@@ -653,22 +656,21 @@
             display: flex;
             flex-direction: column;
 
-            background-color: blueviolet;
+            width: 400px;
+            margin-bottom: 5vh;
         }
 
         footer article *{
             color: var(--shade_0);
-        }          
 
-        footer article a .icon_m:hover{
-            background-color: yellow;
-        }
+        }          
         
         footer article a :hover{
             color: var(--r);
         }
 
         /* article informações -------------------------- */
+
         footer article.info li{
             list-style-position: inside;
             list-style-type: square;
@@ -676,8 +678,6 @@
             padding-left: 1.4em;
 
             color: var(--r);
-
-            background-color: blue;
         }      
         
         /* article newsletter -------------------------- */
@@ -687,7 +687,15 @@
             text-align: center;   
             */     
 
-            justify-content: flex-start;
+            justify-content: space-between;
+            align-items: center;      
+        }
+
+        footer div.newsl_container{
+            width: 100%;
+
+            display: flex;
+            flex-direction: column;
             align-items: center;
         }
 
@@ -699,31 +707,24 @@
             gap: 2em;
 
             width: 90%;
-
-            background-color: red;
         }
 
         footer article.newsl form.form_container div.input_box{
             /*
             width: 90%;
             */
-
-            background-color: blue;
         }
         footer article.newsl form.form_container div.input_box input.input_user_mail{
             padding: 8px;
 
             border-bottom: 4px solid var(--r);
-
-            background-color: green;
         }
 
         footer article.newsl form.form_container div.input_box input.input_icon{
             background-size: 50%;
 
+            width: 52px;
             border-bottom: 4px solid var(--r);
-
-            background-color: palevioletred;
         }
 
         /*
@@ -740,10 +741,8 @@
 
         footer article.newsl div.social a.icon_m-container{
             display: flex;
+            align-self: flex-end;
             height: fit-content;
-
-            background-color: green;
-
         }
 
         footer article.newsl div.social a.icon_m-container{
@@ -754,23 +753,40 @@
             height: 80px;
         }
 
-        footer article.newsl div.social a.icon_m-container img.icon_m{
+        footer article.newsl div.social a.icon_m-container figure.icon_m{
             height: 50px;
             width: 65px;
 
             padding: 15px;
 
-            background-color: red;
+            background-color: var(--shade_0);
 
             clip-path: polygon(50% -50%, 100% 50%, 50% 150%, 0 50%);
+            
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 50%;
         }
 
+        footer article.newsl div.social a.icon_m-container figure.icon_m:hover{
+            background-color: var(--b);
+        }
+
+        footer article.newsl div.social a.icon_m-container figure.icon_facebook{
+            background-image: url(images/icons/facebook-f-brands_333.svg);
+            background-size: 35%;
+        }
+        footer article.newsl div.social a.icon_m-container figure.icon_twiter{
+            background-image: url(images/icons/twitter-brands_333.svg);
+        }
+        footer article.newsl div.social a.icon_m-container figure.icon_youtube{
+            background-image: url(images/icons/youtube-brands_333.svg);
+        }
+
+            
 
         /* TENTATIVAS DE FAZER PERCEPÇÃO VISUAL DE CAIXA HEXAGONAL COM IMAGEM E BORDER:
-        container hexagonal maior que a imagem (hexagonal), a modos de virtualizar uma border; container hexagonal apenas com border; 
-
-        
-
+        container hexagonal maior que a imagem (hexagonal), a modos de virtualizar uma border; container hexagonal apenas com border;
         /*
         .icon_m{
             height: var(--size_28);
@@ -780,10 +796,7 @@
             background-color: red;
         
         }       
-
-        */
-
-        /*
+        *//*
         .hexagon {
             --b: 50px; /* adjust to control the border  *//*
             height: 200px; /* adjust to control the size  *//*
@@ -807,15 +820,31 @@
             clip-path: polygon(50% -50%,100% 50%,50% 150%,0 50%);
             background: #3B8686;                }
             */
-        .icon_s{
-            height: var(--size_16);
-            width: var(--size_16);
-            padding: var(--size_12);
-            background-color: red;
-        }
-
+        
         
         /* article onde estamos -------------------------- */
+        
+        footer article.location a{
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+
+            width: 75%;         
+        }
+    
+        a img.icon_s{
+            height: 24px;
+            width: 24px;
+            
+            margin: 12px;
+        }
+
+        footer article.location iframe.map{
+            height: 200px;
+            width: 100%;
+
+            margin-top: 100px;
+        }
 
     </style>
 </head>
@@ -998,7 +1027,7 @@
                 <label for="user_mail" class="form_txt">Gostaria de ser assinante da nossa Newsletter?<br>Insira o seu endereço de correio electrónico aqui!</label>
 
                 <div class="input_box">
-                    <input type="text" id="user_mail" name="user_mail" value="Email" class="input_user_mail">
+                    <input type="text" id="user_mail" name="user_mail" placeholder="Email" class="input_user_mail">
                     <input type="submit" value="" class="input_icon">
                 </div>
 
@@ -1040,22 +1069,25 @@
         </article>
 
         <article class="newsl">
-            <h1>newsletter</h1>
+            <div class="newsl_container">
 
-            <form action="#" class="form_container">
-                <label for="user_mail">Receba a nossa Newsletter</label>
-                <div class="input_box">
-                    <input type="text" id="user_mail" name="user_mail" value="Email" class="input_user_mail">
-                    <input type="submit" value="" class="input_icon">
-                </div>                
-            </form>
+                <h1>newsletter</h1>
+
+                <form action="#" class="form_container">
+                    <label for="user_mail">Receba a nossa Newsletter</label>
+                    <div class="input_box">
+                        <input type="text" id="user_mail" name="user_mail" placeholder="Email" class="input_user_mail">
+                        <input type="submit" value="" class="input_icon">
+                    </div>                
+                </form>
+            </div>
             
 
             <div class="social">
                 
-                <a href="#" class="icon_m-container"><img src="images/icons/facebook-f-brands.svg" alt="facebook" class="icon_m"></a>
-                <a href="#" class="icon_m-container icon_m-container2"><img src="images/icons/twitter-brands.svg" alt="twiter" class="icon_m"></a>
-                <a href="#" class="icon_m-container"><img src="images/icons/youtube-brands.svg" alt="youtube" class="icon_m"></a>
+                <a href="#" class="icon_m-container"><figure class="icon_m icon_facebook"></figure></a>
+                <a href="#" class="icon_m-container icon_m-container2"><figure class="icon_m  icon_twiter"></figure></a>
+                <a href="#" class="icon_m-container"><figure class="icon_m  icon_youtube"></figure></a>
                
             </div>
         </article>
@@ -1063,11 +1095,12 @@
         <article class="location">
             <h1>onde estamos</h1>
 
-            <a href="mailto:speo@sapo.pt"><img src="images/envelope-solid.svg" alt="mail" class="icon_s">speo@sapo.pt</a>
-            <a href="tel:+351213904065"><img src="images/phone-solid.svg" alt="phone" class="icon_s">213904065</a> 
-            <a href="https://maps.app.goo.gl/VbWJ5hKexvT4D9z59"><img src="images/location-dot-solid.svg" alt="location" class="icon_s">Rua Freitas Gazul 34, Loja 2
+            <a href="mailto:speo@sapo.pt"><img src="images/icons/envelope_fff.svg" alt="mail" class="icon_s">speo@sapo.pt</a>
+            <a href="tel:+351213904065"><img src="images/icons/phone-solid.svg" alt="phone" class="icon_s">213904065</a> 
+            <a href="https://maps.app.goo.gl/VbWJ5hKexvT4D9z59"><img src="images/icons/location-dot-solid.svg" alt="location" class="icon_s">Rua Freitas Gazul 34, Loja 2
                 1350-149 Lisboa</a>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5235.658681880511!2d-9.178709854708009!3d38.71456527037108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19335c209af0ed%3A0xf1e7f4ee0e465182!2sR.%20Freitas%20Gazul%2034%202%2C%201350-148%20Lisboa!5e0!3m2!1sen!2spt!4v1740493623093!5m2!1sen!2spt" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5235.658681880511!2d-9.178709854708009!3d38.71456527037108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19335c209af0ed%3A0xf1e7f4ee0e465182!2sR.%20Freitas%20Gazul%2034%202%2C%201350-148%20Lisboa!5e0!3m2!1sen!2spt!4v1740493623093!5m2!1sen!2spt" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
         </article>
     </footer>    
 </body>
